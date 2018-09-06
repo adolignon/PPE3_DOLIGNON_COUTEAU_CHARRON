@@ -18,7 +18,7 @@ class accesBD
 	public function __construct()
 		{
 		// ORDI PROFSIO
-		$this->hote="ST406\\SQLEXPRESS_2012";
+		$this->hote="ST406\\SQLEXPRESS";
 		$this->port="";
 		$this->login="";
 		$this->passwd="";
