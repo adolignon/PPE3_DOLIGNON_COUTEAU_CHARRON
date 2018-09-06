@@ -18,11 +18,11 @@ class accesBD
 	public function __construct()
 		{
 		// ORDI PROFSIO
-		$this->hote="ST406\\SQLEXPRESS";
+		$this->hote="172.16.0.50";
 		$this->port="";
-		$this->login="";
-		$this->passwd="";
-		$this->base="videoppe3";
+		$this->login="ALT18DOLIGNON";
+		$this->passwd="Ppe3*";
+		$this->base="ppe3_dolignon_charron_couteau";
 		
 		// ORDI DEV2
 		/*$this->hote = "localhost";
