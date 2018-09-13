@@ -29,19 +29,32 @@ Class conteneurGenre
 	//METHODE RETOURNANT LA LISTE DES Genres-----------------------------------------------------------------------------------------
 	public function listeDesGenres()
 		{
-		$liste = "<div class='container h-100'>
-                    <div class='row h-100 justify-content-center align-items-center'>
-                        <table class='table w-50'>
-                            <thead>
-                                <td class='head-table-genre text-white'>Identifiant genre</td>
-                                <td class='head-table-genre text-white'>Genre</td>
-                            </thead>
-                            <tbody>";
-		foreach ($this->lesGenres as $unGenre)
-			{	$liste = $liste.'<tr><td class="text-white td-table">'.$unGenre->getIdGenre().'</td><td class="text-white td-table">'.$unGenre->getLibelleGenre().'</td></tr>';
-			}
-			$liste=$liste."</tbody></table></div></div>";
-		return $liste;
+			$liste = "<div class='container h-100'>
+						<div class='row h-100 justify-content-center align-items-center'>
+							<table class='table w-50'>
+								<thead>
+									<td class='head-table-genre text-white'>Identifiant genre</td>
+									<td class='head-table-genre text-white'>Genre</td>
+								</thead>
+								<tbody>
+								<tr>";
+								
+									foreach ($this->lesGenres as $unGenre)
+										{	
+											$liste = $liste.'
+											
+												<td class="text-white td-table">'.$unGenre->getIdGenre().'
+												</td>
+												<td class="text-white td-table">'.$unGenre->getLibelleGenre().'
+												</td>';
+										}
+										$liste=$liste."
+								</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>";
+			return $liste;
 		}
 		
 		//METHODE RETOURNANT LA LISTE DES genres DANS UNE BALISE <SELECT>------------------------------------------------------------------
