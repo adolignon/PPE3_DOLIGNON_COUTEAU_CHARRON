@@ -12,7 +12,7 @@
 	<head>
 	<body>        
         <nav class="navbar navbar-dark navbar-expand-md bg-faded justify-content-center">
-        <a href="/" class="navbar-brand"><img src="Images/logo.jpg" alt="Videotheque"><br/><span class="text-red text-small">Vos vidéos<br/>en un clic</span></a>
+        <a href="index.php?vue=accueil" class="navbar-brand"><img src="Images/logo.jpg" alt="Videotheque"><br/><span class="text-red text-small">Vos vidéos<br/>en un clic</span></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar3">
             <span class="navbar-toggler-icon"></span>
         </button>

@@ -13,9 +13,9 @@ Class conteneurClient
 		}
 	
 	//METHODE AJOUTANT UN Client------------------------------------------------------------------------------
-	public function ajouteUnClient($unIdClient, $unNomClient, $unPrenomClient, $unEmailClient, $uneDateAbonnement, $unLoginClient, $unPwdClient)
+	public function ajouteUnClient($unIdClient, $unNomClient, $unPrenomClient, $uneDateNaissClient, $unEmailClient, $unLoginClient, $unPwdClient,$uneDateAbonnement)
 		{
-		$unClient = new client($unIdClient, $unNomClient, $unPrenomClient, $unEmailClient, $uneDateAbonnement,$unLoginClient, $unPwdClient);
+		$unClient = new client($unIdClient, $unNomClient, $unPrenomClient, $uneDateNaissClient, $unEmailClient, $uneDateAbonnement,$unLoginClient, $unPwdClient);
 		$this->lesClients->append($unClient);
 			
 		}
@@ -107,6 +107,40 @@ Class conteneurClient
 			}
 		return $trouve;
 	}
+	
+	public function VerificationExistLoginClient($unLogin)
+	{
+		//echo $unLogin."<br/>";
+		//echo $unPassword."<br/>";
+		//initialisation d'un booléen (on part de l'hypothèse que le client n'existe pas)
+		$trouve=0;
+		//création d'un itérateur sur la collection lesClients
+		$iClient = $this->lesClients->getIterator();
+		//TQ on a pas trouvé le client et que l'on est pas arrivé au bout de la collection
+		while ((!$trouve)&&($iClient->valid()))
+			{
+			//SI le login du client courant correspond au login passé en paramètre
+			// On supprime les caractères invisibles que le SGBD ajoute pour compenser puisqu'on utilise des char(n)
+			$testLogin = trim($iClient->current()->getLoginClient());
+			//$test = $testLogin===$unLogin;
+			//$test2 = $testPassword===$unPassword;
+			//echo "Login : ".strcmp($unLogin,$testLogin)."<br/>".$test;
+			//echo "Password : ".strcmp($unPassword,$testPassword)."<br/>".$test2;
+			//On test avec la fonction strcmp
+			if (trim($unLogin)==$testLogin)
+				{
+				//maj du booléen
+				$trouve=1;
+				}
+			//SINON on passe au client suivant
+			else
+				{
+					$iClient->next();
+				}
+			}
+		return $trouve;
+	}
+	
 	}
 	
 ?> 

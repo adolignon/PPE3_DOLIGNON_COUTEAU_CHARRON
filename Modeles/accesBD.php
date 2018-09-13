@@ -93,19 +93,20 @@ class accesBD
 	//-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 	//---------------------------CREATION DE LA REQUETE D'INSERTION Client-------------------------------------------------------------------------------------------------------------------------------------------------
 	//-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-	public function insertClient($unNomClient, $unPrenomClient, $unEmailClient, $uneDateAbonnement,$unLoginClient,$unPwdClient)
+	public function insertClient($unNomClient, $unPrenomClient, $uneDateNaissClient, $unEmailClient,$unLoginClient,$unPwdClient, $uneDateAbonnementClient)
 		{
 		//génération automatique de l'identifiant
 		$sonId = $this->donneProchainIdentifiant("client","idClient");
 		
-		$requete = $this->conn->prepare("INSERT INTO CLIENT (nomClient,prenomClient, emailClient, dateAbonnementClient,loginClient, pwdClient) VALUES (?,?,?,?,?,?)");
+		$requete = $this->conn->prepare("INSERT INTO CLIENT (nomClient,prenomClient, emailClient, dateAbonnementClient,login, pwd, dateNaissClient) VALUES (?,?,?,?,?,?,?)");
 		//définition de la requête SQL
 		$requete->bindValue(1,$unNomClient);
 		$requete->bindValue(2,$unPrenomClient);
 		$requete->bindValue(3,$unEmailClient);
-		$requete->bindValue(4,$uneDateAbonnement);
+		$requete->bindValue(4,$uneDateAbonnementClient);
 		$requete->bindValue(5,$unLoginClient);
 		$requete->bindValue(6,$unPwdClient);
+		$requete->bindValue(7,$uneDateNaissClient);
 		//exécution de la requête SQL
 		if(!$requete->execute())
 		{

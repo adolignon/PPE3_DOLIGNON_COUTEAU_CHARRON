@@ -6,21 +6,23 @@ Class client
 	private $idClient;
 	private $nomClient;
 	private $prenomClient;
+	private $dateNaissClient;
 	private $emailClient;
 	private $dateAbonnementClient;
 	private $loginClient;
 	private $pwdClient;
 		
 	//CONSTRUCTEUR-----------------------------------------------------------------------------
-	public function __construct($unIdClient, $unNomClient, $unPrenomClient, $unEmailClient, $uneDateAbonnement, $unLoginClient, $unPwdClient)
+	public function __construct($unIdClient, $unNomClient, $unPrenomClient, $uneDateNaissClient, $unEmailClient, $uneDateAbonnement, $unLoginClient, $unPwdClient)
 		{
-		$this->idClient = $unIdClient;
-		$this->nomClient = $unNomClient;
-		$this->prenomClient = $unPrenomClient;
-		$this->emailClient = $unEmailClient;
-		$this->dateAbonnementClient = $uneDateAbonnement;
-		$this->loginClient = $unLoginClient;
-		$this->pwdClient = $unPwdClient;
+			$this->idClient = $unIdClient;
+			$this->nomClient = $unNomClient;
+			$this->prenomClient = $unPrenomClient;
+			$this->dateNaissClient = $uneDateNaissClient;
+			$this->emailClient = $unEmailClient;
+			$this->dateAbonnementClient = $uneDateAbonnement;
+			$this->loginClient = $unLoginClient;
+			$this->pwdClient = $unPwdClient;
 		}
 	
 	//ACCESSEURS-------------------------------------------------------------------------------
@@ -52,6 +54,10 @@ Class client
 	public function getPwdClient()
 	{
 		return $this->pwdClient;
+	}
+	
+	public function getDateNaissClient(){
+		return $this->dateNaissClient;
 	}
 	
 	}

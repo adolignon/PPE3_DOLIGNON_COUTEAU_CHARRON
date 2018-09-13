@@ -56,7 +56,7 @@ Class gestionVideo
 		while ($nb<sizeof($resultat))
 			{
 			//instanciation du client et ajout de celui-ci dans la collection
-			$this->tousLesClients->ajouteUnClient($resultat[$nb][0],$resultat[$nb][1],$resultat[$nb][2],$resultat[$nb][3],$resultat[$nb][4],$resultat[$nb][5],$resultat[$nb][6]);
+			$this->tousLesClients->ajouteUnClient($resultat[$nb][0],$resultat[$nb][1],$resultat[$nb][2],$resultat[$nb][7],$resultat[$nb][3],$resultat[$nb][4],$resultat[$nb][5],$resultat[$nb][6]);
 			$nb++;
 			
 			}
@@ -165,19 +165,24 @@ Class gestionVideo
 	{
 		$resultat=$this->tousLesClients->verificationExistanceClient($unLogin, $unPassword);
 		return $resultat;
-	}			
+	}	
+
+	public function verifExistLogin($unLogin){
+		$resultat = $this->tousLesClients->VerificationExistLoginClient($unLogin);
+		return $resultat;
+	}
 		
 
 
 
 
 //METHODE INSERANT UN CLIENT----------------------------------------------------------------------------------------------------------
-	public function ajouteUnClient($unIdClient, $unNomClient, $unPrenomClient, $unEmailClient, $uneDateAbonnement)
+	public function ajouteUnClient($unIdClient, $unNomClient, $unPrenomClient, $uneDateNaissClient, $unEmailClient, $login, $passwd,$uneDateAbonnement)
 		{
 		//insertion du client dans la base de données
-		$sonNumero = $this->maBD->insertClient($unIdClient, $unNomClient, $unPrenomClient, $unEmailClient, $uneDateAbonnement);
+		$sonNumero = $this->maBD->insertClient($unIdClient, $unNomClient, $unPrenomClient, $uneDateNaissClient, $unEmailClient, $login, $passwd,$uneDateAbonnement);
 		//instanciation du client et ajout de celui-ci dans la collection
-		$this->tousLesClients->ajouteUnClient($unIdClient, $unNomClient, $unPrenomClient, $unEmailClient, $uneDateAbonnement);
+		$this->tousLesClients->ajouteUnClient($unIdClient, $unNomClient, $unPrenomClient, $uneDateNaissClient, $unEmailClient, $login, $passwd,$uneDateAbonnement);
 		}
 	//METHODE INSERANT UN FILM----------------------------------------------------------------------------------------------------------
 	public function ajouteUnFilm($unIdFilm,$unTitreFilm, $unRealisateurFilm, $unIdGenre,$uneDureeFilm)
@@ -335,7 +340,10 @@ Class gestionVideo
 	public function lesEpisodesAuFormatHTML()
 		{
 		return $this->tousLesEpisodes->lesEpisodesAuFormatHTML();
-		}		
+		}
+	public function prochainClient(){
+		return $this->tousLesClients->nbClient()+1;
+	}
 
 		
 	}

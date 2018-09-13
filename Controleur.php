@@ -101,7 +101,23 @@ class Controleur
 			//CAS ajouter un utilisateur ------------------------------------------------------------------------------
 			case 'nouveauLogin' :
 				// ici il faut pouvoir recuperer un nouveau utilisateur
-				require 'Vues/construction.php';
+				$log = $_POST['login'];
+				$resultat=$this->maVideotheque->verifExistLogin($log);
+				if($resultat==1){
+					require 'Vues/trouve.php';
+				}
+				else{
+					$unIdClient = $this->maVideotheque->prochainClient();
+					$unNomClient= $_POST['prenomClient'];
+					$unPrenomClient= $_POST['prenomClient'];
+					$unEmailClient= $_POST['emailClient'];
+					$uneDateNaissClient= $_POST['dateNaissClient'];
+					$uneDateAbonnement= date("Y-m-d");
+					$login = $_POST['login'];
+					$passwd = $_POST['password'];
+					$this->maVideotheque->ajouteUnClient($unIdClient, $unNomClient, $unPrenomClient, $uneDateNaissClient, $unEmailClient, $login,$passwd,$uneDateAbonnement);
+					require 'Vues/ajoutUtilisateur.php';
+				}
 				break;	
 			//CAS verifier un utilisateur ------------------------------------------------------------------------------
 			case 'verifLogin' :
