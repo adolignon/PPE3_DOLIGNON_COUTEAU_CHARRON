@@ -6,6 +6,7 @@ function chargerPage()
 {
 	$monControleur = new Controleur();
 	$monControleur->afficheEntete();
+	echo test;
 		if(isset($_GET['login']) || isset($_POST['nomClient']))
 		{
 				if ((isset($_GET['vue']))&& (isset($_GET['action'])))
