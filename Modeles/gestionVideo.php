@@ -57,7 +57,7 @@ Class gestionVideo
 			{
 			//ajouteUnClient($unIdClient, $unNomClient, $unPrenomClient, $uneDateNaissClient, $unEmailClient, $unLoginClient, $unPwdClient,$uneDateAbonnement, $estActifClient)
 			//instanciation du client et ajout de celui-ci dans la collection
-			$this->tousLesClients->ajouteUnClient($resultat[$nb][0],$resultat[$nb][1],$resultat[$nb][2],$resultat[$nb][8],$resultat[$nb][3],$resultat[$nb][5],$resultat[$nb][6],$resultat[$nb][4],$resultat[7]);
+			$this->tousLesClients->ajouteUnClient($resultat[$nb][0],$resultat[$nb][1],$resultat[$nb][2],$resultat[$nb][8],$resultat[$nb][3],$resultat[$nb][5],$resultat[$nb][6],$resultat[$nb][4],$resultat[$nb][7]);
 			$nb++;
 			
 			}
@@ -172,9 +172,16 @@ Class gestionVideo
 		$resultat = $this->tousLesClients->VerificationExistLoginClient($unLogin);
 		return $resultat;
 	}
+	
+	public function verifActif($unLogin, $unPassword){
+		return $this->tousLesClients->verifActif($unLogin, $unPassword);
+	}
 		
 
-
+	public function updateMdp($unMdp,$unLogin){
+		$this->maBD->updateMdp($unMdp,$unLogin);
+		$this->tousLesClients->updateMdp($unMdp,$unLogin);
+	}
 
 
 //METHODE INSERANT UN CLIENT----------------------------------------------------------------------------------------------------------

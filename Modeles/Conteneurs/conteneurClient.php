@@ -108,6 +108,31 @@ Class conteneurClient
 		return $trouve;
 	}
 	
+	public function verifActif($unLogin,$unPassword){
+		$trouve=0;
+		$iClient = $this->lesClients->getIterator();
+		while((!$trouve)&&($iClient->valid())){
+			$testLogin = trim($iClient->current()->getLoginClient());
+			$testPassword = trim($iClient->current()->getPwdClient());
+			//$test = $testLogin===$unLogin;
+			//$test2 = $testPassword===$unPassword;
+			//echo "Login : ".strcmp($unLogin,$testLogin)."<br/>".$test;
+			//echo "Password : ".strcmp($unPassword,$testPassword)."<br/>".$test2;
+			//On test avec la fonction strcmp
+			if (strcmp($unPassword,$testPassword)===0 && strcmp($unPassword,$testPassword)===0)
+				{
+				//maj du booléen
+				$trouve=1;
+				}
+			//SINON on passe au client suivant
+			else
+				{
+					$iClient->next();
+				}
+		}
+		return $iClient->current()->getEstActifClient();
+	}
+	
 	public function VerificationExistLoginClient($unLogin)
 	{
 		//echo $unLogin."<br/>";
@@ -139,6 +164,25 @@ Class conteneurClient
 				}
 			}
 		return $trouve;
+	}
+	
+	public function updateMdp($unMdp,$unLogin){
+		$trouve=0;
+		$iClient = $this->lesClients->getIterator();
+		while((!$trouve)&&($iClient->valid())){
+			$testLogin = trim($iClient->current()->getLoginClient());
+			if ($unLogin==$testLogin)
+				{
+				//maj du booléen
+				$trouve=1;
+				}
+			//SINON on passe au client suivant
+			else
+				{
+					$iClient->next();
+				}
+		}
+		$iClient->current()->setPassword($unMdp);
 	}
 	
 	}

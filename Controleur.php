@@ -96,7 +96,7 @@ class Controleur
 			//CAS enregistrement d'une modification sur le compte------------------------------------------------------------------------------
 			case 'modifier' :
 				// ici il faut pouvoir modifier le mot de passe de l'utilisateur
-				require 'Vues/construction.php';
+				require 'Vues/modifier.php';
 				break;
 			//CAS ajouter un utilisateur ------------------------------------------------------------------------------
 			case 'nouveauLogin' :
@@ -130,8 +130,9 @@ class Controleur
 						//si le client existe alors j'affiche le menu et la page visuGenre.php
 						if($resultat==1)
 						{
-							require 'Vues/menu.php';
+							
 							if($this->maVideotheque->verifActif($unLogin,$unPassword)==1){
+								require 'Vues/menu.php';
 								echo $this->maVideotheque->listeLesGenres();
 							}
 							else{
@@ -153,6 +154,14 @@ class Controleur
 									<meta http-equiv='refresh' content='1;index.php'>";
 						}
 				break;	
+				case 'modifMdp':
+					require 'Vues/modifMdp.php';
+					break;
+				case 'nvMdp':
+					$unMdp = $_POST['nvMdp'];
+					$this->maVideotheque->updateMdp($unMdp,$_SESSION['login']);
+					require 'Vues/okModifier.php';
+					break;
 			}
 		}
 	//-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

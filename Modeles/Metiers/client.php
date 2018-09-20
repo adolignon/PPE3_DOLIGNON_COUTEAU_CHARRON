@@ -66,6 +66,10 @@ Class client
 		return $this->estActifClient;
 	}
 	
+	public function setPassword($unPassword){
+		$this->pwdClient = $unPassword;
+	}
+	
 	}
 	
 ?>
