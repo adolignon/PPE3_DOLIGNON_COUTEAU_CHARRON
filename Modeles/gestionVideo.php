@@ -55,8 +55,9 @@ Class gestionVideo
 		$nb=0;
 		while ($nb<sizeof($resultat))
 			{
+			//ajouteUnClient($unIdClient, $unNomClient, $unPrenomClient, $uneDateNaissClient, $unEmailClient, $unLoginClient, $unPwdClient,$uneDateAbonnement, $estActifClient)
 			//instanciation du client et ajout de celui-ci dans la collection
-			$this->tousLesClients->ajouteUnClient($resultat[$nb][0],$resultat[$nb][1],$resultat[$nb][2],$resultat[$nb][7],$resultat[$nb][3],$resultat[$nb][4],$resultat[$nb][5],$resultat[$nb][6]);
+			$this->tousLesClients->ajouteUnClient($resultat[$nb][0],$resultat[$nb][1],$resultat[$nb][2],$resultat[$nb][8],$resultat[$nb][3],$resultat[$nb][5],$resultat[$nb][6],$resultat[$nb][4],$resultat[7]);
 			$nb++;
 			
 			}
@@ -182,7 +183,7 @@ Class gestionVideo
 		//insertion du client dans la base de données
 		$sonNumero = $this->maBD->insertClient($unIdClient, $unNomClient, $unPrenomClient, $uneDateNaissClient, $unEmailClient, $login, $passwd,$uneDateAbonnement);
 		//instanciation du client et ajout de celui-ci dans la collection
-		$this->tousLesClients->ajouteUnClient($unIdClient, $unNomClient, $unPrenomClient, $uneDateNaissClient, $unEmailClient, $login, $passwd,$uneDateAbonnement);
+		$this->tousLesClients->ajouteUnClient($unIdClient, $unNomClient, $unPrenomClient, $uneDateNaissClient, $unEmailClient, $login, $passwd,$uneDateAbonnement,0);
 		}
 	//METHODE INSERANT UN FILM----------------------------------------------------------------------------------------------------------
 	public function ajouteUnFilm($unIdFilm,$unTitreFilm, $unRealisateurFilm, $unIdGenre,$uneDureeFilm)

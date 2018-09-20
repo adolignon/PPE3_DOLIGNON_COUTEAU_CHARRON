@@ -6,7 +6,6 @@ function chargerPage()
 {
 	$monControleur = new Controleur();
 	$monControleur->afficheEntete();
-	echo test;
 		if(isset($_GET['login']) || isset($_POST['nomClient']))
 		{
 				if ((isset($_GET['vue']))&& (isset($_GET['action'])))
@@ -76,12 +75,13 @@ function chargerPage()
                                     </td>
                                     <td class='justify-content-center td-table'>
                                         <form action='index.php?vue=compte&action=nouveauLogin' method='post'>
-                                            <input class='form-group' type='text' name='nomClient' placeholder='saisir votre nom'/><br>
-                                            <input class='form-group' type='text' name='prenomClient' placeholder='Saisir votre prenom'/><br>
-                                            <input class='form-group' type='text' name='emailClient' placeholder='Saisir votre email'/><br>
-                                            <input class='form-group' type='date' name='dateNaissClient' placeholder='Date de naissance'/><br>
-                                            <input class='form-group' type='text' name='login' placeholder='Saisir votre login'/><br>
-                                            <input class='form-group' type='password' name='password' placeholder='Choisir un mot de passe'/><br>
+                                            <input class='form-group' type='text' name='nomClient' placeholder='saisir votre nom' required/><br>
+                                            <input class='form-group' type='text' name='prenomClient' placeholder='Saisir votre prenom' required/><br>
+                                            <input class='form-group' type='text' name='emailClient' placeholder='Saisir votre email' required /><br>
+                                            <input class='form-group' type='date' name='dateNaissClient' placeholder='Date de naissance' required/><br>
+                                            <input class='form-group' type='text' name='login' placeholder='Saisir votre login' required/><br>
+                                            <input class='form-group' type='password' name='password' placeholder='Choisir un mot de passe' required/><br>
+											<input class='form-group' type='hidden' name='dateAbonnementClient' value='".date("Y-m-d")."'>
                                             <input class='btn btn-secondary' type='submit' value='Accéder'/>
                                         </form>
                                     </td>

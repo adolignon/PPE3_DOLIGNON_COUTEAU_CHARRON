@@ -1,4 +1,4 @@
 <?php
-	$nom = $_POST['nomClient'];
-	echo 'Ce nom de famille est déjà enregistré.. Merci d\'en utiliser un autre (exemple : '.$nom.'1).';
+	$login = $_POST['login'];
+	echo '<strong><p style="color:white">Ce login est déjà enregistré.. Merci d\'en utiliser un autre (exemple : '.$login.'1).</p></strong>';
 ?>

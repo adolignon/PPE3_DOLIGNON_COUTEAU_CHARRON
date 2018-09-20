@@ -13,9 +13,9 @@ Class conteneurClient
 		}
 	
 	//METHODE AJOUTANT UN Client------------------------------------------------------------------------------
-	public function ajouteUnClient($unIdClient, $unNomClient, $unPrenomClient, $uneDateNaissClient, $unEmailClient, $unLoginClient, $unPwdClient,$uneDateAbonnement)
+	public function ajouteUnClient($unIdClient, $unNomClient, $unPrenomClient, $uneDateNaissClient, $unEmailClient, $unLoginClient, $unPwdClient,$uneDateAbonnement, $estActifClient)
 		{
-		$unClient = new client($unIdClient, $unNomClient, $unPrenomClient, $uneDateNaissClient, $unEmailClient, $uneDateAbonnement,$unLoginClient, $unPwdClient);
+		$unClient = new client($unIdClient, $unNomClient, $unPrenomClient, $uneDateNaissClient, $unEmailClient, $uneDateAbonnement,$unLoginClient, $unPwdClient, $estActifClient);
 		$this->lesClients->append($unClient);
 			
 		}
@@ -127,7 +127,7 @@ Class conteneurClient
 			//echo "Login : ".strcmp($unLogin,$testLogin)."<br/>".$test;
 			//echo "Password : ".strcmp($unPassword,$testPassword)."<br/>".$test2;
 			//On test avec la fonction strcmp
-			if (trim($unLogin)==$testLogin)
+			if ($unLogin==$testLogin)
 				{
 				//maj du booléen
 				$trouve=1;

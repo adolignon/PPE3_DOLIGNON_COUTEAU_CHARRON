@@ -93,12 +93,12 @@ class accesBD
 	//-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 	//---------------------------CREATION DE LA REQUETE D'INSERTION Client-------------------------------------------------------------------------------------------------------------------------------------------------
 	//-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-	public function insertClient($unNomClient, $unPrenomClient, $uneDateNaissClient, $unEmailClient,$unLoginClient,$unPwdClient, $uneDateAbonnementClient)
+	public function insertClient($unIdClient, $unNomClient, $unPrenomClient, $uneDateNaissClient, $unEmailClient,$unLoginClient,$unPwdClient, $uneDateAbonnementClient)
 		{
 		//génération automatique de l'identifiant
-		$sonId = $this->donneProchainIdentifiant("client","idClient");
+		//$sonId = $this->donneProchainIdentifiant("client","idClient");
 		
-		$requete = $this->conn->prepare("INSERT INTO CLIENT (nomClient,prenomClient, emailClient, dateAbonnementClient,login, pwd, dateNaissClient) VALUES (?,?,?,?,?,?,?)");
+		$requete = $this->conn->prepare("INSERT INTO CLIENT (nomClient,prenomClient, emailClient, dateAbonnementClient,login, pwd,actif,dateNaissClient) VALUES (?,?,?,?,?,?,?,?)");
 		//définition de la requête SQL
 		$requete->bindValue(1,$unNomClient);
 		$requete->bindValue(2,$unPrenomClient);
@@ -106,7 +106,8 @@ class accesBD
 		$requete->bindValue(4,$uneDateAbonnementClient);
 		$requete->bindValue(5,$unLoginClient);
 		$requete->bindValue(6,$unPwdClient);
-		$requete->bindValue(7,$uneDateNaissClient);
+		$requete->bindValue(7,0);
+		$requete->bindValue(8,$uneDateNaissClient);
 		//exécution de la requête SQL
 		if(!$requete->execute())
 		{
@@ -114,7 +115,7 @@ class accesBD
 		}
 
 		//retour de l'identifiant du nouveau tuple
-		return $sonId;
+		return $unIdClient;
 		}
 	//-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 	//---------------------------CREATION DE LA REQUETE D'INSERTION DES GENRES------------------------------------------------------------------------------------------------------------------------------------------------

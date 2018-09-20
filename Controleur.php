@@ -108,11 +108,11 @@ class Controleur
 				}
 				else{
 					$unIdClient = $this->maVideotheque->prochainClient();
-					$unNomClient= $_POST['prenomClient'];
+					$unNomClient= $_POST['nomClient'];
 					$unPrenomClient= $_POST['prenomClient'];
 					$unEmailClient= $_POST['emailClient'];
 					$uneDateNaissClient= $_POST['dateNaissClient'];
-					$uneDateAbonnement= date("Y-m-d");
+					$uneDateAbonnement= $_POST['dateAbonnementClient'];
 					$login = $_POST['login'];
 					$passwd = $_POST['password'];
 					$this->maVideotheque->ajouteUnClient($unIdClient, $unNomClient, $unPrenomClient, $uneDateNaissClient, $unEmailClient, $login,$passwd,$uneDateAbonnement);
@@ -131,7 +131,13 @@ class Controleur
 						if($resultat==1)
 						{
 							require 'Vues/menu.php';
-							echo $this->maVideotheque->listeLesGenres();	
+							if($this->maVideotheque->verifActif($unLogin,$unPassword)==1){
+								echo $this->maVideotheque->listeLesGenres();
+							}
+							else{
+								echo '<strong><p style="color:white">Votre chèque ne nous est pas encore parvenu. En attendant réception de celui-ci les vidéos vous sont innacessibles.</p></strong>';
+							}
+								
 						}
 						else
 						{
