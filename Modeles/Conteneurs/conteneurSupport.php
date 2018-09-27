@@ -34,6 +34,17 @@ Class conteneurSupport
 			}
 		return $liste;
 		}
+	public function listeDesSupportsIdGenre($idGenre)
+	{	
+		$liste = '';
+		foreach ($this->lesSupports as $unSupport)
+			{	
+				if($unSupport->getLeGenreDeSupport()->getIdGenre() == $idGenre){
+					$liste = $liste.'Support N° : "'.$unSupport->getIdSupport().' -> Titre : '.$unSupport->getTitreSupport().' - '.$unSupport->getLeGenreDeSupport()->getLibelleGenre().'><br>';
+				}
+			}
+		return $liste;
+	}
 				//METHODE RETOURNANT LA LISTE DES supports DANS UNE BALISE <SELECT>------------------------------------------------------------------
 	public function lesSupportsAuFormatHTML()
 		{
@@ -71,6 +82,45 @@ Class conteneurSupport
 				$iSupport->next();
 			}
 			return $leBonSupport;
+		}
+		
+	public function getTabSupports()
+		{
+			$nbSupport=$this->lesSupports->count();
+			$tab = array();
+			$i=0;
+			for($i;$i<$nbSupport;$i++)
+				{
+						$tab[$i][0]= $this->lesSupports[$i]->getIdSupport();
+						$tab[$i][1]= $this->lesSupports[$i]->getTitreSupport();
+						$tab[$i][2]= $this->lesSupports[$i]->getRealisateurSupport();
+						$tab[$i][3]= $this->lesSupports[$i]->getImageSupport();
+						$tab[$i][4]= $this->lesSupports[$i]->getLeGenreDeSupport()->getIdGenre();
+					
+				}
+			return $tab;
+		}
+	
+	public function getTabSupportsIdGenre($unIdGenre)
+		{
+			$nbSupport=$this->lesSupports->count();
+			$tab = array();
+			$i=0;
+			foreach ($this->lesSupports as $unSupport)
+			{
+				if($unSupport->getLeGenreDeSupport()->getIdGenre() == $unIdGenre)
+				{
+					
+						$tab[$i][0]= $unSupport->getIdSupport();
+						$tab[$i][1]= $unSupport->getLeGenreDeSupport()->getIdGenre();
+						$tab[$i][2]= $unSupport->getImageSupport();
+						$tab[$i][3]= $unSupport->getTitreSupport();
+						$tab[$i][4]= $unSupport->getRealisateurSupport();
+						
+						$i++;
+				}
+			}
+			return $tab;
 		}
 	
 	

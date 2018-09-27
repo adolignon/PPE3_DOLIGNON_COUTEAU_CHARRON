@@ -73,6 +73,9 @@ class Controleur
 			case "accueil":
 				session_destroy();
 				break;
+			case 'genre':
+				$this->vueGenre($action);
+				break;
 			}
 		}
 			
@@ -276,7 +279,33 @@ class Controleur
 					}
 				break;
 			}
-		}	
+		}
+
+	//-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	//----------------------------Genre--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	//-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	private function vueGenre($action)
+		{
+		//SELON l'action demandée
+		switch ($action)
+			{	
+			//CAS visualisation de tous les genres-------------------------------------------------------------------------------------------------
+			case "visualiser" :
+				//ici il faut pouvoir visualiser l'ensemble des genres 
+					$_SESSION['tabGenre'] = $this->maVideotheque->leTabGenres();
+					$_SESSION['nbGenres'] = $this->maVideotheque->donneNbGenres();
+					require 'Vues/voirGenres.php';
+			break;
+			case "choixGenre" :
+				//ici il faut pouvoir visualiser l'ensemble des genres 
+					$_SESSION['tabSupportsIdGenre'] = $this->maVideotheque->leTabSupportsIdGenre($_GET['IdGenre']);
+					$_SESSION['nbSupports'] = $this->maVideotheque->donneNbSupports();
+					$_SESSION['lesSupports'] = $this->maVideotheque->listeDesSupportsIdGenre($_GET['IdGenre']);
+					require 'Vues/voirSupportGenre.php';
+				break;
+				
+			}
+		}		
 
 	}	
 ?>
