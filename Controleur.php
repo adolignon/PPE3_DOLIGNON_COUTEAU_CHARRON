@@ -172,6 +172,28 @@ class Controleur
 					}
 					
 					break;
+				
+				case 'modifInfos' :
+					require 'Vues/modifInfos.php';
+					break;
+					
+				case 'modifEmail' : 
+				require 'Vues/modifEmail.php';
+				break;
+				
+				case 'modifNom' :
+				require 'Vues/modifNom.php';
+				break;
+				
+				case 'okModifNom':
+				require 'Vues/infosModifie.php';
+				$unNom = $_POST['nvNom'];
+				break;
+				
+				case 'okModifEmail':
+				$unEmail = $_POST['nvEmail'];
+				require 'Vues/InfosModifie.php';
+				break;
 			}
 		}
 	//-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

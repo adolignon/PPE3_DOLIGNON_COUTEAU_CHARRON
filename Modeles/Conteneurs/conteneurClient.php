@@ -121,8 +121,8 @@ Class conteneurClient
 			//On test avec la fonction strcmp
 			if (strcmp($unPassword,$testPassword)===0 && strcmp($unPassword,$testPassword)===0 && $unLogin==$testLogin)
 				{
-				//maj du booléen
-				$trouve=1;
+					//maj du booléen
+					$trouve=1;
 				}
 			//SINON on passe au client suivant
 			else
