@@ -25,10 +25,10 @@
                     <button class="btn btn-secondary dropdown-toggle btn-avatar" type="button" data-toggle="dropdown"><img class="avatar" src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"><span class="caret"></span></button>
                     <ul class="dropdown-menu">
                         <!--<li><a href="index.php?vue=compte&action=verifLogin">Se connecter</a></li>-->
-                        <li><a href="index.php?login=<?php echo $_SESSION['login'];?>&password=<?php echo $_SESSION['password'];?>&vue=compte&action=visualiser">Voir mon profil</a></li>
+                        <li><a href="index.php?vue=compte&action=modifier">Voir mon profil</a></li>
                         <li><a href="index.php?vue=compte&action=modifier">Modifier mon profil</a></li>
-						<li><a href="index.php?login=<?php echo $_SESSION['login'];?>&password=<?php echo $_SESSION['password'];?>&vue=compte&action=visuEmprunt">Visualiser mes Emprunts</a></li>
-						<li><a href="index.php?login=<?php echo $_SESSION['login'];?>&password=<?php echo $_SESSION['password'];?>&action=visualiser&vue=accueil">Se déconnecter</a></li>
+						<li><a href="index.php?vue=compte&action=modifier">Visualiser mes Emprunts</a></li>
+						<li><a href="index.php?vue=accueil">Se déconnecter</a></li>
                     </ul>
                 </ul>    
             </li>

@@ -124,8 +124,8 @@ class Controleur
 				// ici il faut pouvoir vérifier un login un nouveau utilisateur
 				//Je récupère les login et password saisi et je verifie leur existancerequire
 				//pour cela je verifie dans le conteneurClient via la gestion.
-				$unLogin=$_GET['login'];
-				$unPassword=$_GET['password'];
+				$unLogin=$_POST['login'];
+				$unPassword=$_POST['password'];
 				$resultat=$this->maVideotheque->verifLogin($unLogin, $unPassword);
 						//si le client existe alors j'affiche le menu et la page visuGenre.php
 						if($resultat==1)
@@ -137,6 +137,7 @@ class Controleur
 							}
 							else{
 								echo '<strong><p style="color:white">Votre chèque ne nous est pas encore parvenu. En attendant réception de celui-ci les vidéos vous sont innacessibles.</p></strong>';
+								session_destroy();
 							}
 								
 						}
@@ -160,7 +161,16 @@ class Controleur
 				case 'nvMdp':
 					$unMdp = $_POST['nvMdp'];
 					$this->maVideotheque->updateMdp($unMdp,$_SESSION['login']);
+					session_destroy();
 					require 'Vues/okModifier.php';
+					break;
+					
+				case "menu" : 
+					if($this->maVideotheque->verifActif($_SESSION['login'],$_SESSION['password'])==1){
+						require 'Vues/menu.php';
+						echo $this->maVideotheque->listeLesGenres();
+					}
+					
 					break;
 			}
 		}

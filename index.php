@@ -7,19 +7,26 @@ function chargerPage()
 	$monControleur = new Controleur();
 	$monControleur->afficheEntete();
 	//|| isset($_POST['nomClient']
-		if(isset($_GET['login']) && isset($_GET['password'])){
-			$_SESSION['login'] = $_GET['login'];
-			$_SESSION['password'] = $_GET['password'];
+		if(isset($_POST['login']) && isset($_POST['password'])){
+			$_SESSION['login'] = $_POST['login'];
+			$_SESSION['password'] = $_POST['password'];
 		}
 		if(isset($_SESSION['login']))
 		{
 				if ((isset($_GET['vue']))&& (isset($_GET['action'])))
-				{   $monControleur->affichePage($_GET['action'],$_GET['vue']);
+				{   
+					$monControleur->affichePage($_GET['action'],$_GET['vue']);
+				}
+				else{
+					if ((isset($_GET['vue']))&& !(isset($_GET['action']))){
+						session_destroy();
+						premier_affichage();
+					}
 				}
 		}
 		else
 		{
-					premier_affichage();
+			premier_affichage();
 		}
 	$monControleur->affichePiedPage();
 }
@@ -70,11 +77,9 @@ function chargerPage()
                             <tbody>
                                 <tr>
                                     <td class='td-table justify-content-center'>
-                                        <form action=index.php method=GET>
-                                            <input class='form-group' type='text' placeholder='Login' name='login'/><br>
-                                            <input class='form-group' type='password' placeholder='Mot de passe' name='password'/><br>
-                                            <input type='hidden' name='vue' value='compte'>
-                                            <input type='hidden' name='action' value='verifLogin'/>
+                                        <form action=index.php?vue=compte&action=verifLogin method=POST>
+                                            <input class='form-group' type='text' placeholder='Login' name='login' required//><br>
+                                            <input class='form-group' type='password' placeholder='Mot de passe' name='password' required/><br>
                                             <input class='btn btn-secondary mx-auto' type='submit' value='Accéder'/>
                                         </form>
                                     </td>
