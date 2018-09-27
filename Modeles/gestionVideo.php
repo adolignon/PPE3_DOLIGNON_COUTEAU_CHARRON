@@ -290,6 +290,10 @@ Class gestionVideo
 		{
 		return $this->tousLesEpisodes->nbEpisodes();
 		}
+	public function donneNbSupports()
+		{
+		return $this->tousLesSupports->nbSupports();
+		}
 	//METHODE RETOURNANT LA LISTE DES differents elements-------------------------------------------------------------------------------------------------------
 	public function listeLesClients()
 		{
@@ -319,7 +323,14 @@ Class gestionVideo
 		{
 		return $this->tousLesEpisodes->listeDesEpisodes();
 		}		
-			
+	public function listeDesSupports()
+		{
+		return $this->tousLesSupports->listeDesSupports();
+		}
+	public function listeDesSupportsIdGenre($idGenre)
+	{
+		return $this->tousLesSupports->listeDesSupportsIdGenre($idGenre);
+	}
 	//METHODE RETOURNANT LA LISTE DES DIFFERENTS ELEMENTS DANS DES BALISES <SELECT>-----------------------------------------------------------------
 	public function lesClientsAuFormatHTML()
 		{
@@ -349,9 +360,30 @@ Class gestionVideo
 		{
 		return $this->tousLesEpisodes->lesEpisodesAuFormatHTML();
 		}
-	public function prochainClient(){
-		return $this->tousLesClients->nbClient()+1;
+	public function lesSupportsAuFormatHTML()
+		{
+		return $this->tousLesSupports->lesSupportsAuFormatHTML();
+		}	
+	
+	public function leTabGenres()
+	{
+		return $this->tousLesGenres->getTabGenres();
 	}
+	
+	public function leTabSupportsGenres()
+	{
+		return $this->tousLesSupports->getTabSupports();
+	}
+	
+	public function leTabSupportsIdGenre($unIdGenre)
+	{
+		return $this->tousLesSupports->getTabSupportsIdGenre($unIdGenre);
+	}
+	
+	public function prochainClient()
+		{
+		return $this->tousLesClients->nbClient()+1;
+		}
 
 		
 	}

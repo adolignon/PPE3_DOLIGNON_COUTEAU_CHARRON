@@ -21,7 +21,7 @@ Class conteneurGenre
 		}
 		
 	//METHODE RETOURNANT LE NOMBRE de genres-------------------------------------------------------------------------------
-	public function nbGenre()
+	public function nbGenres()
 		{
 		return $this->lesGenres->count();
 		}	
@@ -81,7 +81,22 @@ Class conteneurGenre
 				$iGenre->next();
 			}
 		return $leBonGenre;
-		}		
+		}
+
+	public function getTabGenres()
+		{
+			$nbGenre=$this->lesGenres->count();
+			$tab = array();
+			$i=0;
+			for($i;$i<$nbGenre;$i++)
+				{
+					$tab[$i][0]= $this->lesGenres[$i]->getIdGenre();
+					$tab[$i][1]= $this->lesGenres[$i]->getLibelleGenre();
+					
+				}
+				
+			return $tab;
+		}
 	
 	}
 	
