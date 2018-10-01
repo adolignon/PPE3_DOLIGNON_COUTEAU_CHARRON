@@ -17,10 +17,13 @@
 					{
 							echo '<td>
 								<div class="overlay">
-									<a href="#">
+									<a href="index.php?vue=support&action=detailsSupport&IdSupport='.$leTabSupportIdGenre[$j][0].'">
 										<img class="images" src="Images\\'.$leTabSupportIdGenre[$j][2].'">
 										<div class="text-clear">
 											<div class="text">'.$leTabSupportIdGenre[$j][3].'</div>
+										</div>
+										<div class="textContenu">
+											Détails
 										</div>
 									</a>
 								</div>
