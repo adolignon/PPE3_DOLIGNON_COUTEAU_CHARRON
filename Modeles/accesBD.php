@@ -20,8 +20,8 @@ class accesBD
 		// ORDI PROFSIO
 		// $this->hote="172.16.0.50";
 		// $this->port="";
-		// $this->login="ALT18DOLIGNON";
-		// $this->passwd="Ppe3*";
+		// $this->login="ALT18COUTEAU";
+		// $this->passwd="CouteauLoelia2018";
 		// $this->base="ppe3_dolignon_charron_couteau";
 		
 		// ORDI DEV2
@@ -41,7 +41,7 @@ class accesBD
 	{
 		try
         {
-			//echo "sqlsrv:server=$this->hote$this->port;Database=$this->base"." | ".$this->login." | ".$this->passwd;
+			// echo "sqlsrv:server=$this->hote$this->port;Database=$this->base"." | ".$this->login." | ".$this->passwd;
 			// Pour SQL Server
 			// $this->conn = new PDO("sqlsrv:server=$this->hote$this->port;Database=$this->base", $this->login, $this->passwd);
 			// $this->conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION ); 

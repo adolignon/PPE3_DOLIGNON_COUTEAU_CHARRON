@@ -73,7 +73,7 @@ Class conteneurFilm
 			else
 				$iFilm->next();
 			}
-			$leBonSupport= new support($leBonFilm->getIdFilm(), $leBonFilm->getTitreFilm(), $leBonFilm->getRealisateurFilm(), $leBonFilm->getImageFilm(), $leGenreSupport);
+			$leBonSupport= new support($leBonFilm->getIdFilm(), $leBonFilm->getTitreFilm(), $leBonFilm->getRealisateurFilm(), $leBonFilm->getImageFilm(), $leBonFilm->getLeGenreDuFilm());
 		return $leBonFilm;
 		}
 //METHODE RETOURNANT UN film A PARTIR DE SON NUMERO--------------------------------------------	
@@ -96,7 +96,8 @@ Class conteneurFilm
 				$trouve=true;
 				//sauvegarde le film courant
 				$leBonFilm = $iFilm->current();
-				$leBonSupport= new support($leBonFilm->getIdFilm(), $leBonFilm->getTitreFilm(), $leBonFilm->getRealisateurFilm(), $leBonFilm->getImageFilm(), $leGenreSupport);
+				// $leBonSupport= new support($leBonFilm->getIdFilm(), $leBonFilm->getTitreFilm(), $leBonFilm->getRealisateurFilm(), $leBonFilm->getImageFilm(), $leGenreSupport);
+				$leBonSupport= new support($leBonFilm->getIdFilm(), $leBonFilm->getTitreFilm(), $leBonFilm->getRealisateurFilm(), $leBonFilm->getImageFilm(), $leBonFilm->getLeGenreDeSupport());
 		
 				}
 			//SINON on passe au film suivant
@@ -104,7 +105,21 @@ Class conteneurFilm
 				$iFilm->next();
 			}
 		return $leBonSupport;
-		}		
+		}
+
+	public function estUnFilm($unIdSupport)
+		{
+			$type="S";
+			
+			foreach($this->lesFilms as $unFilm)
+			{
+				if($unFilm->getIdFilm() == $unIdSupport)
+				{
+					$type="F";
+				}
+			}
+			return $type;
+		}
 	
 	}
 	

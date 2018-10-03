@@ -386,27 +386,27 @@ Class gestionVideo
 	}
 	
 	public function prochainClient()
-		{
-		return $this->tousLesClients->nbClient()+1;
-		}
-	
-	public function leTypeSupport($unTitreSupport)
 	{
-		$typeSupport = "";
-		foreach($this->toutesLesSeries as $uneSerie)
-		{
-			if($uneSerie->getTitreSupport() == $unTitreSupport)
-			{
-				$typeSupport = "S";
-			}
-			else
-			{
-				$typeSupport = "F";
-			}
-		}
-		return $typeSupport;
+		return $this->tousLesClients->nbClient()+1;
 	}
-		
+	
+	public function etreUnFilm($unIdSupport)
+	{
+		return $this->tousLesFilms->estUnFilm($unIdSupport);
+	}
+	
+	// public function etreUneSerie($unIdSupport)
+	// {
+		// return $this->toutesLesSeries->estUneSerie($unIdSupport);
+	// }
+	
+	public function infosFilm($unIdFilm)
+	{
+		return $this->tousLesFilms->donneObjetFilmDepuisNumero($unIdFilm);
+		// return $this->tousLesFilms->infosFilm($unIdFilm);
+	}
+	
+	
 	}
 	
 ?>
