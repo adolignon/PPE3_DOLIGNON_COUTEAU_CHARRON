@@ -298,9 +298,11 @@ class Controleur
 			//CAS visualisation de tous les genres-------------------------------------------------------------------------------------------------
 			case "detailsSupport" :
 				//ici il faut pouvoir visualiser l'ensemble des genres 
-					$_SESSION['supportIdSupport'] = $this->maVideotheque->leSupportsIdSupport($_GET['IdSupport']);
-					$titreSupport = $_SESSION['supportIdSupport']->getTitreSupport();
-					$_SESSION['typeSupport'] = $this->maVideotheque->leTypeSupport($_GET['IdSupport']);
+					// $_SESSION['supportIdSupport'] = $this->maVideotheque->leSupportsIdSupport($_GET['IdSupport']);
+					// $titreSupport = $_SESSION['supportIdSupport']->getTitreSupport();
+					$_SESSION['typeSupport']=$this->maVideotheque->etreUnFilm($_GET['IdSupport']);
+					$_SESSION['infosFilm']=$this->maVideotheque->infosFilm($_GET['IdSupport']);
+					// $_SESSION['typeSupport2']=$this->maVideotheque->etreUneSerie($_GET['IdSupport']);
 					// $_SESSION['nbSupports'] = $this->maVideotheque->donneNbSupports();
 					require 'Vues/voirDetailsSupport.php';
 			break;
