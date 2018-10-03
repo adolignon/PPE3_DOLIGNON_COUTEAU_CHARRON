@@ -123,3 +123,21 @@ body
 	text-shadow: 2px 2px 2px #000;
 	top: 40%;
 }
+
+.textTitre
+{
+	position : relative;
+	font-size : 30px;
+	color : white;
+	text-shadow: 2px 2px 2px #000;
+	top: 0%;
+}
+
+.textContenu
+{
+	position : relative;
+	font-size : 15px;
+	color : white;
+	text-shadow: 2px 2px 2px #000;
+	top: 0%;
+}

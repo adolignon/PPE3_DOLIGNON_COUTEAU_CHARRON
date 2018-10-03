@@ -380,11 +380,32 @@ Class gestionVideo
 		return $this->tousLesSupports->getTabSupportsIdGenre($unIdGenre);
 	}
 	
+	public function leSupportsIdSupport($unIdSupport)
+	{
+		return $this->tousLesSupports->donneObjetSupportDepuisNumero($unIdSupport);
+	}
+	
 	public function prochainClient()
 		{
 		return $this->tousLesClients->nbClient()+1;
 		}
-
+	
+	public function leTypeSupport($unTitreSupport)
+	{
+		$typeSupport = "";
+		foreach($this->toutesLesSeries as $uneSerie)
+		{
+			if($uneSerie->getTitreSupport() == $unTitreSupport)
+			{
+				$typeSupport = "S";
+			}
+			else
+			{
+				$typeSupport = "F";
+			}
+		}
+		return $typeSupport;
+	}
 		
 	}
 	
