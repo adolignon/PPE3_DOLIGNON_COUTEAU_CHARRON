@@ -390,18 +390,18 @@ Class gestionVideo
 		return $this->tousLesClients->nbClient()+1;
 		}
 	
-	public function leTypeSupport($unTitreSupport)
+	public function leTypeSupport($unIdSupport)
 	{
-		$typeSupport = "";
-		foreach($this->toutesLesSeries as $uneSerie)
+		$typeSupport = "?";
+		foreach($this->tousLesFilms as $unFilm)
 		{
-			if($uneSerie->getTitreSupport() == $unTitreSupport)
+			if($unFilm->getIdFilm() == $unIdSupport)
 			{
-				$typeSupport = "S";
+				$typeSupport = "F";
 			}
 			else
 			{
-				$typeSupport = "F";
+				$typeSupport = "S";
 			}
 		}
 		return $typeSupport;

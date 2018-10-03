@@ -20,6 +20,7 @@
 					<br><br>
 					<div class="textContenu">
 						Réalisateur : '.$leSupport->getRealisateurSupport().'
+						Type : '.$leSupport->getRealisateurSupport().'
 					</div>
 					<div class="textContenu">
 						Durée :

@@ -300,7 +300,7 @@ class Controleur
 				//ici il faut pouvoir visualiser l'ensemble des genres 
 					$_SESSION['supportIdSupport'] = $this->maVideotheque->leSupportsIdSupport($_GET['IdSupport']);
 					$titreSupport = $_SESSION['supportIdSupport']->getTitreSupport();
-					$_SESSION['typeSupport'] = $this->maVideotheque->leTypeSupport($titreSupport);
+					$_SESSION['typeSupport'] = $this->maVideotheque->leTypeSupport($_GET['IdSupport']);
 					// $_SESSION['nbSupports'] = $this->maVideotheque->donneNbSupports();
 					require 'Vues/voirDetailsSupport.php';
 			break;
