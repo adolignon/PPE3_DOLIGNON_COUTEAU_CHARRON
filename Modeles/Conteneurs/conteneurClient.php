@@ -184,6 +184,44 @@ Class conteneurClient
 		}
 		$iClient->current()->setPassword($unMdp);
 	}
+
+    public function updateNom($unNom,$unLogin){
+        $trouve=0;
+        $iClient = $this->lesClients->getIterator();
+        while((!$trouve)&&($iClient->valid())){
+            $testLogin = trim($iClient->current()->getLoginClient());
+            if ($unLogin==$testLogin)
+            {
+                //maj du booléen
+                $trouve=1;
+            }
+            //SINON on passe au client suivant
+            else
+            {
+                $iClient->next();
+            }
+        }
+        $iClient->current()->setNom($unNom);
+    }
+
+    public function updateEmail($unEmail,$unLogin){
+        $trouve=0;
+        $iClient = $this->lesClients->getIterator();
+        while((!$trouve)&&($iClient->valid())){
+            $testLogin = trim($iClient->current()->getLoginClient());
+            if ($unLogin==$testLogin)
+            {
+                //maj du booléen
+                $trouve=1;
+            }
+            //SINON on passe au client suivant
+            else
+            {
+                $iClient->next();
+            }
+        }
+        $iClient->current()->setNom($unEmail);
+    }
 	
 	}
 	

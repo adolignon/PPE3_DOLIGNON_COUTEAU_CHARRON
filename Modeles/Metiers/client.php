@@ -69,6 +69,14 @@ Class client
 	public function setPassword($unPassword){
 		$this->pwdClient = $unPassword;
 	}
+
+	public function setNom($unNom){
+	    $this->nomClient = $unNom;
+    }
+
+    public function setEmail($unEmail){
+	    $this->emailClient = $unEmail;
+    }
 	
 	}
 	

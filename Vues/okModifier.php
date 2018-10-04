@@ -1,3 +1,5 @@
 <?php
-	echo '<strong><p style="color:white">Votre mot de passe a bien été modifié</p></strong>';
+	echo '<script>alert("Votre mot de passe a bien été modifié");</script>
+          <meta http-equiv=\'refresh\' content=\'1;index.php?vue=compte&action=menu\'>';
+
 ?>

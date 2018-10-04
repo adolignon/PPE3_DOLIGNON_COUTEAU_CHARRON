@@ -183,6 +183,15 @@ Class gestionVideo
 		$this->tousLesClients->updateMdp($unMdp,$unLogin);
 	}
 
+	public function updateNom($unNom, $unLogin){
+		$this->maBD->updateNom($unNom,$unLogin);
+		$this->tousLesClients->updateNom($unNom,$unLogin);
+	}
+
+	public function updateEmail($unEmail, $unLogin){
+		$this->maBD->updateEmail($unEmail,$unLogin);
+		$this->tousLesClients->updateEmail($unEmail,$unLogin);
+	}
 
 //METHODE INSERANT UN CLIENT----------------------------------------------------------------------------------------------------------
 	public function ajouteUnClient($unIdClient, $unNomClient, $unPrenomClient, $uneDateNaissClient, $unEmailClient, $login, $passwd,$uneDateAbonnement)

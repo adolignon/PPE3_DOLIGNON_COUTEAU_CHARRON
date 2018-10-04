@@ -155,7 +155,7 @@ class Controleur
 							echo "</nav>
 									<div class='container h-100'>
 										<div class='row h-100 justify-content-center align-items-center'>
-											<span class='text-white'>Identifiants incorrects</span>
+											<script>alert('Identifiants incorrects');</script>
 										</div>
 									</div>
 									<meta http-equiv='refresh' content='1;index.php'>";
@@ -192,13 +192,15 @@ class Controleur
 				break;
 				
 				case 'okModifNom':
-				require 'Vues/infosModifie.php';
-				$unNom = $_POST['nvNom'];
+                    $unNom = $_POST['nvNom'];
+                    $this->maVideotheque->updateNom($unNom, $_SESSION['login']);
+					require 'Vues/infosModifie.php';
 				break;
 				
 				case 'okModifEmail':
-				$unEmail = $_POST['nvEmail'];
-				require 'Vues/InfosModifie.php';
+					$unEmail = $_POST['nvEmail'];
+					$this->maVideotheque->updateEmail($unEmail, $_SESSION['login']);
+					require 'Vues/InfosModifie.php';
 				break;
 			}
 		}

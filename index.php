@@ -87,7 +87,7 @@ function chargerPage()
                                         <form action='index.php?vue=compte&action=nouveauLogin' method='post'>
                                             <input class='form-group' type='text' name='nomClient' placeholder='saisir votre nom' required/><br>
                                             <input class='form-group' type='text' name='prenomClient' placeholder='Saisir votre prenom' required/><br>
-                                            <input class='form-group' type='text' name='emailClient' placeholder='Saisir votre email' required /><br>
+                                            <input class='form-group' type='email' name='emailClient' placeholder='Saisir votre email' required /><br>
                                             <input class='form-group' type='date' name='dateNaissClient' placeholder='Date de naissance' required/><br>
                                             <input class='form-group' type='text' name='login' placeholder='Saisir votre login' required/><br>
                                             <input class='form-group' type='password' name='password' placeholder='Choisir un mot de passe' required/><br>
