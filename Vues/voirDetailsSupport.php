@@ -3,13 +3,11 @@
 
 	<?php 
 	
-	// $leSupport = $_SESSION['supportIdSupport'];
 	$leTypeSupport = $_SESSION['typeSupport'];
-	$leFilm = $_SESSION['infosFilm'];
-	// $leTypeSupport2 = $_SESSION['typeSupport2'];
 
 	if($leTypeSupport == "F")
 	{
+		$leFilm = $_SESSION['infosFilm'];
 		echo '<table>
 			<tr>
 				<td>
@@ -34,7 +32,25 @@
 	}
 	else
 	{
-		
+		$laSerie = $_SESSION['infosSerie'];
+		echo '<table>
+			<tr>
+				<td>
+					<div class="overlay" style="text-align:left;">
+						<img class="images" src="Images\\'.$laSerie->getUneImageDeLaSerie().'">
+					</div>
+				</td>
+				<td>
+					<div class="textTitre">
+						'.$laSerie->getTitreSerie().'
+					</div>
+					<br><br>
+					<div class="textContenu">
+						Réalisateur : '.$laSerie->getRealisateurSerie().'
+					</div>
+				</td>
+			</tr>
+		</table>';
 	}
 	?>
 	

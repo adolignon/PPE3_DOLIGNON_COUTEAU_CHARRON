@@ -415,6 +415,11 @@ Class gestionVideo
 		// return $this->tousLesFilms->infosFilm($unIdFilm);
 	}
 	
+	public function infosSerie($unIdSerie)
+	{
+		return $this->toutesLesSeries->donneObjetSerieDepuisNumeroSerie($unIdSerie);
+	}
+	
 	
 	}
 	
