@@ -110,6 +110,7 @@ class Controleur
 				$log = $_POST['login'];
 				$resultat=$this->maVideotheque->verifExistLogin($log);
 				if($resultat==1){
+                    session_destroy();
 					require 'Vues/trouve.php';
 				}
 				else{
@@ -122,6 +123,7 @@ class Controleur
 					$login = $_POST['login'];
 					$passwd = $_POST['password'];
 					$this->maVideotheque->ajouteUnClient($unIdClient, $unNomClient, $unPrenomClient, $uneDateNaissClient, $unEmailClient, $login,$passwd,$uneDateAbonnement);
+					session_destroy();
 					require 'Vues/ajoutUtilisateur.php';
 				}
 				break;	

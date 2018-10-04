@@ -237,8 +237,9 @@ Class gestionVideo
 		$leGenre = null;
 		$laSerie = null;
 		$laSerie = $laSerie->donneObjetSerieDepuisNumero($unIdSerie);
+		$unIdSaison = null; //TODO : Recup l'id saison
 		//instanciation de la saison et ajout de celle-ci dans la collection
-		$this->toutesLesSaisons->ajouteUneSaison($unIdSaison,$uneAnneeSaison, $unNbrEpisodeSaison, $laSerie);
+		$this->toutesLesSaisons->ajouteUneSaison($unIdSaison,$uneAnneeSaison, $unNbrEpisodesPrevus, $laSerie);
 		}	
 		
     //METHODE INSERANT UN EMPRUNT--------------------------------------------------------------------------------------------------------
@@ -266,7 +267,7 @@ Class gestionVideo
 		$laSerie = null;
 		$laSaison = null;
 		$laSaison = $laSaison->donneObjetSaisonDepuisNumero($unIdSerie,$unNumSaison);
-		$this->tousLesEpisodes->ajouteUnEpisode($sonCode,$unTitreEpisode,$uneDureeEpisode, $laSaison);
+		$this->tousLesEpisodes->ajouteUnEpisode($sonCode,$unTitreEpisode,$uneDuree, $laSaison);
 		}	
 	//METHODE RETOURNANT LE NOMBRE DE CLIENT------------------------------------------------------------------------------------------------
 	public function donneNbClients()
@@ -396,7 +397,7 @@ Class gestionVideo
 	
 	public function prochainClient()
 	{
-		return $this->tousLesClients->nbClient()+1;
+		return $this->tousLesClients->prochainClient();
 	}
 	
 	public function etreUnFilm($unIdSupport)

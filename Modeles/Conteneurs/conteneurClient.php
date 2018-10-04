@@ -222,7 +222,10 @@ Class conteneurClient
         }
         $iClient->current()->setNom($unEmail);
     }
-	
+	public function prochainClient(){
+		$prochainId = count($this->lesClients)+1;
+		return $prochainId;
+	}
 	}
 	
 ?> 
