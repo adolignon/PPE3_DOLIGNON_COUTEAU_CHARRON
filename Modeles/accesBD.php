@@ -18,7 +18,7 @@ class accesBD
 	public function __construct()
 		{
 		// ORDI PROFSIO
-<<<<<<< HEAD
+
 		 $this->hote="172.16.0.50";
 		 $this->port="";
 		 $this->login="ALT18COUTEAU";
@@ -31,8 +31,8 @@ class accesBD
 //		$this->login = "root";
 //		$this->passwd = "Indochine-du85";
 //		$this->base = "videoppe3";
-=======
->>>>>>> master
+
+
 		$this->connexion();
 		
 		}
@@ -46,21 +46,21 @@ class accesBD
         {
 			// echo "sqlsrv:server=$this->hote$this->port;Database=$this->base"." | ".$this->login." | ".$this->passwd;
 			// Pour SQL Server
-<<<<<<< HEAD
+
 			 $this->conn = new PDO("sqlsrv:server=$this->hote$this->port;Database=$this->base", $this->login, $this->passwd);
 			 $this->conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
 			
             // Pour Mysql/MariaDB
 //            $this->conn = new PDO("mysql:dbname=$this->base;host=$this->hote",$this->login, $this->passwd);
 //            $this->boolConnexion = true;
-=======
+
 			$this->conn = new PDO("sqlsrv:server=$this->hote$this->port;Database=$this->base", $this->login, $this->passwd);
 			$this->conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION ); 
 			
             // Pour Mysql/MariaDB
             // $this->conn = new PDO("mysql:dbname=$this->base;host=$this->hote",$this->login, $this->passwd);
             // $this->boolConnexion = true;
->>>>>>> master
+
         }
         catch(PDOException $e)
         {

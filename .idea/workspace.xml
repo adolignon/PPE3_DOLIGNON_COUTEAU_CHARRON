@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e66f9889-f2db-43f1-b7f2-d6b6e31f042b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Controleur.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controleur.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Modeles/Conteneurs/conteneurClient.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modeles/Conteneurs/conteneurClient.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Modeles/Metiers/client.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modeles/Metiers/client.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Modeles/accesBD.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modeles/accesBD.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Modeles/gestionVideo.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modeles/gestionVideo.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Vues/infosModifie.php" beforeDir="false" afterPath="$PROJECT_DIR$/Vues/infosModifie.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Vues/modifEmail.php" beforeDir="false" afterPath="$PROJECT_DIR$/Vues/modifEmail.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Vues/okModifier.php" beforeDir="false" afterPath="$PROJECT_DIR$/Vues/okModifier.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,12 +20,12 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="php" value="11" />
+          <entry key="php" value="12" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="PHP" value="11" />
+          <entry key="PHP" value="12" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -81,11 +73,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Vues/okModifier.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="68">
               <caret line="4" column="2" lean-forward="true" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Modeles/accesBD.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="62" lean-forward="true" selection-start-line="62" selection-end-line="62" />
             </state>
           </provider>
         </entry>
@@ -127,15 +128,6 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Modeles/Metiers/client.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="785">
-              <caret line="77" column="38" selection-start-line="77" selection-start-column="38" selection-end-line="77" selection-end-column="38" />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="Git.Settings">
@@ -146,13 +138,13 @@
       <list>
         <option value="$PROJECT_DIR$/Modeles/Metiers/client.php" />
         <option value="$PROJECT_DIR$/Modeles/Conteneurs/conteneurClient.php" />
-        <option value="$PROJECT_DIR$/Modeles/accesBD.php" />
         <option value="$PROJECT_DIR$/Modeles/gestionVideo.php" />
         <option value="$PROJECT_DIR$/Controleur.php" />
         <option value="$PROJECT_DIR$/Vues/modifEmail.php" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/Vues/infosModifie.php" />
         <option value="$PROJECT_DIR$/Vues/okModifier.php" />
+        <option value="$PROJECT_DIR$/Modeles/accesBD.php" />
       </list>
     </option>
   </component>
@@ -238,12 +230,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1538633607547</updated>
-      <workItem from="1538633613414" duration="2987000" />
+      <workItem from="1538633613414" duration="3343000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2987000" />
+    <option name="totallyTimeSpent" value="3343000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="1000" extended-state="6" />
@@ -277,13 +269,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Modeles/accesBD.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="133" column="38" selection-start-line="133" selection-start-column="38" selection-end-line="133" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Modeles/Metiers/client.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="785">
@@ -346,6 +331,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="2" lean-forward="true" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Modeles/accesBD.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="62" lean-forward="true" selection-start-line="62" selection-end-line="62" />
         </state>
       </provider>
     </entry>
