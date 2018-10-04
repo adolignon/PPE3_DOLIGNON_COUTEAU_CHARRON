@@ -380,12 +380,33 @@ Class gestionVideo
 		return $this->tousLesSupports->getTabSupportsIdGenre($unIdGenre);
 	}
 	
+	public function leSupportsIdSupport($unIdSupport)
+	{
+		return $this->tousLesSupports->donneObjetSupportDepuisNumero($unIdSupport);
+	}
+	
 	public function prochainClient()
-		{
+	{
 		return $this->tousLesClients->nbClient()+1;
-		}
-
-		
+	}
+	
+	public function etreUnFilm($unIdSupport)
+	{
+		return $this->tousLesFilms->estUnFilm($unIdSupport);
+	}
+	
+	// public function etreUneSerie($unIdSupport)
+	// {
+		// return $this->toutesLesSeries->estUneSerie($unIdSupport);
+	// }
+	
+	public function infosFilm($unIdFilm)
+	{
+		return $this->tousLesFilms->donneObjetFilmDepuisNumero($unIdFilm);
+		// return $this->tousLesFilms->infosFilm($unIdFilm);
+	}
+	
+	
 	}
 	
 ?>

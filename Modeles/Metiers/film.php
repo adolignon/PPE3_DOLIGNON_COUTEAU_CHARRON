@@ -29,9 +29,9 @@ Class film extends support
 	{
 		return parent::getRealisateurSupport();
 	}
-	public function getUneImageDuFilm()
+	public function getImageFilm()
 	{
-		return parent::getImageSupport;
+		return parent::getImageSupport();
 	}	
 		
 	public function getLeGenreDuFilm()

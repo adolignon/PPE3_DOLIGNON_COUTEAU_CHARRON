@@ -74,8 +74,22 @@ Class conteneurSerie
 				$iSerie->next();
 			}
 		return $laBonneSerie;
-		}	
-	
+		}
+		
+	// public function estUneSerie($unIdSupport)
+		// {
+			// $serie=0;
+			
+			// foreach($this->lesSeries as $uneSerie)
+			// {
+				// if($uneSerie->getIdSerie() == $unIdSupport)
+				// {
+					// $serie=1;
+				// }
+			// }
+			// return $serie;
+		// }
+
 	}
 	
 ?> 

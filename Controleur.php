@@ -76,6 +76,9 @@ class Controleur
 			case 'genre':
 				$this->vueGenre($action);
 				break;
+			case 'support':
+				$this->vueSupport($action);
+				break;
 			}
 		}
 			
@@ -303,6 +306,28 @@ class Controleur
 					$_SESSION['lesSupports'] = $this->maVideotheque->listeDesSupportsIdGenre($_GET['IdGenre']);
 					require 'Vues/voirSupportGenre.php';
 				break;
+				
+			}
+		}
+	//-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	//----------------------------Support--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	//-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	private function vueSupport($action)
+		{
+		//SELON l'action demandée
+		switch ($action)
+			{	
+			//CAS visualisation de tous les genres-------------------------------------------------------------------------------------------------
+			case "detailsSupport" :
+				//ici il faut pouvoir visualiser l'ensemble des genres 
+					// $_SESSION['supportIdSupport'] = $this->maVideotheque->leSupportsIdSupport($_GET['IdSupport']);
+					// $titreSupport = $_SESSION['supportIdSupport']->getTitreSupport();
+					$_SESSION['typeSupport']=$this->maVideotheque->etreUnFilm($_GET['IdSupport']);
+					$_SESSION['infosFilm']=$this->maVideotheque->infosFilm($_GET['IdSupport']);
+					// $_SESSION['typeSupport2']=$this->maVideotheque->etreUneSerie($_GET['IdSupport']);
+					// $_SESSION['nbSupports'] = $this->maVideotheque->donneNbSupports();
+					require 'Vues/voirDetailsSupport.php';
+			break;
 				
 			}
 		}		
