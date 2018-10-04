@@ -13,7 +13,7 @@
 				{
 					$j=$i;
 					echo '<tr>';
-					while($j<$i+4 && $j<$nbS)
+					while($j<$i+3 && $j<$nbS)
 					{
 							echo '<td>
 								<div class="overlay">

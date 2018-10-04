@@ -76,19 +76,19 @@ Class conteneurSerie
 		return $laBonneSerie;
 		}
 		
-	// public function estUneSerie($unIdSupport)
-		// {
-			// $serie=0;
+	public function estUneSerie($unIdSupport)
+		{
+			$serie=0;
 			
-			// foreach($this->lesSeries as $uneSerie)
-			// {
-				// if($uneSerie->getIdSerie() == $unIdSupport)
-				// {
-					// $serie=1;
-				// }
-			// }
-			// return $serie;
-		// }
+			foreach($this->lesSeries as $uneSerie)
+			{
+				if($uneSerie->getIdSerie() == $unIdSupport)
+				{
+					$serie=1;
+				}
+			}
+			return $serie;
+		}
 
 	}
 	

@@ -73,7 +73,7 @@ Class conteneurFilm
 			else
 				$iFilm->next();
 			}
-			$leBonSupport= new support($leBonFilm->getIdFilm(), $leBonFilm->getTitreFilm(), $leBonFilm->getRealisateurFilm(), $leBonFilm->getImageFilm(), $leBonFilm->getLeGenreDuFilm());
+			$leBonSupport= new support($leBonFilm->getIdFilm(), $leBonFilm->getTitreFilm(), $leBonFilm->getRealisateurFilm(), $leBonFilm->getImageFilm(), $leBonFilm->getLeGenreDeSupport());
 		return $leBonFilm;
 		}
 //METHODE RETOURNANT UN film A PARTIR DE SON NUMERO--------------------------------------------	
