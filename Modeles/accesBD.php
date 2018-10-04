@@ -236,7 +236,7 @@ class accesBD
 	//-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 	//---------------------------CREATION DE LA REQUETE D'INSERTION d'une Saison ------------------------------------------------------------------------------------------------------------------------------------------------
 	//-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-	public function insertSaison($unIdSerie,$uneAnneeSaison, $unNbrEpisodesPrevus)
+	public function insertSaison($unIdSerie, $uneAnneeSaison, $unNbrEpisodesPrevus)
 		{
 		//génération automatique de l'identifiant de la Saison
 		$sonId = $this->donneProchainIdentifiantSaison("saison","idSerie");
@@ -244,7 +244,7 @@ class accesBD
 		$requete = $this->conn->prepare("INSERT INTO saison (idSerie,idSaison,anneeSaison, nbrEpisodesPrevus) VALUES (?,?,?,?);");
 		$requete->bindValue(1,$unIdSerie);
 		$requete->bindValue(2,$sonId);
-		$requete->bindValue(3,$uneAnneSaison);
+		$requete->bindValue(3,$uneAnneeSaison);
 		$requete->bindValue(4,$unNbrEpisodesPrevus);
 
 		//exécution de la requête SQL
@@ -405,7 +405,7 @@ class accesBD
 	//-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 	//-----------------------------DONNE LE PROCHAIN INDENTIFIANT D'UNE SAISON---------------------------------------------------------------------------------------------------------------------------------------------------------------
 	//-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-	private function donneProchainIdentifiantEpisode($uneTable,$unIdentifiantSerie, $unIdentifiantSaison)
+	private function donneProchainIdentifiantEpisode($uneTable,$unIdentifiantSerie, $unIdSaison)
 		{
 		//$prochainId[0]=0;
 		//définition de la requête SQL

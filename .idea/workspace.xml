@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="e66f9889-f2db-43f1-b7f2-d6b6e31f042b" name="Default Changelist" comment="" />
+=======
+    <list default="true" id="e66f9889-f2db-43f1-b7f2-d6b6e31f042b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Modeles/accesBD.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modeles/accesBD.php" afterDir="false" />
+    </list>
+>>>>>>> ado_modify
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,13 +34,13 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="php" value="685" />
+          <entry key="php" value="687" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="9" />
-          <entry key="PHP" value="676" />
+          <entry key="PHP" value="678" />
         </counts>
       </usages-collector>
     </session>
@@ -83,8 +89,13 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Modeles/accesBD.php">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="-1037">
               <caret line="62" lean-forward="true" selection-start-line="62" selection-end-line="62" />
+=======
+            <state relative-caret-position="6636">
+              <caret line="406" column="89" selection-start-line="406" selection-start-column="89" selection-end-line="406" selection-end-column="89" />
+>>>>>>> ado_modify
             </state>
           </provider>
         </entry>
@@ -233,7 +244,11 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="3943000" />
+=======
+    <option name="totallyTimeSpent" value="3079000" />
+>>>>>>> ado_modify
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="1000" extended-state="6" />
@@ -267,6 +282,16 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+<<<<<<< HEAD
+=======
+    <entry file="file://$PROJECT_DIR$/Modeles/accesBD.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6636">
+          <caret line="406" column="89" selection-start-line="406" selection-start-column="89" selection-end-line="406" selection-end-column="89" />
+        </state>
+      </provider>
+    </entry>
+>>>>>>> ado_modify
     <entry file="file://$PROJECT_DIR$/Modeles/Metiers/client.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="785">
