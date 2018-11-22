@@ -29,7 +29,7 @@ class accesBD
 //		$this->hote = "localhost";
 //		$this->port = "";
 //		$this->login = "root";
-//		$this->passwd = "Indochine-du85";
+//		$this->passwd = "blabla";
 //		$this->base = "videoppe3";
 
 
