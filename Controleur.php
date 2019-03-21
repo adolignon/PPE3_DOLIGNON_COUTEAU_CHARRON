@@ -27,6 +27,8 @@ class Controleur
 		{
 		//appel de la vue de l'entête
 		require 'Vues/entete.php';
+		// appel de la vue du menu
+		require 'Vues/menu.php';
 		}
 		
 		
@@ -43,11 +45,11 @@ class Controleur
 	//-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 	//--------------------------METHODE D'AFFICHAGE DU MENU-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 	//-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-	public function afficheMenu()
-		{
-		//appel de la vue du menu
-		require 'Vues/menu.php';
-		}
+	// public function afficheMenu()
+		// {
+		// appel de la vue du menu
+		// require 'Vues/menu.php';
+		// }
 	
 	
 	//-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -138,8 +140,8 @@ class Controleur
 						{
 							
 							if($this->maVideotheque->verifActif($unLogin,$unPassword)==1){
-								require 'Vues/menu.php';
-								echo $this->maVideotheque->listeLesGenres();
+								// require 'Vues/menu.php';
+								require 'Vues/accueil.php';
 							}
 							else{
 								echo '<strong><p style="color:white">Votre chèque ne nous est pas encore parvenu. En attendant réception de celui-ci les vidéos vous sont innacessibles.</p></strong>';
@@ -173,8 +175,8 @@ class Controleur
 					
 				case "menu" : 
 					if($this->maVideotheque->verifActif($_SESSION['login'],$_SESSION['password'])==1){
-						require 'Vues/menu.php';
-						echo $this->maVideotheque->listeLesGenres();
+						// require 'Vues/menu.php';
+						require 'Vues/accueil.php';
 					}
 					
 					break;

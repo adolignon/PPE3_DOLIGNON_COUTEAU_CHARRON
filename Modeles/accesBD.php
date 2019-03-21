@@ -22,7 +22,7 @@ class accesBD
 		 $this->hote="172.16.0.50";
 		 $this->port="";
 		 $this->login="ALT18COUTEAU";
-		 $this->passwd="CouteauLoelia2018";
+		 $this->passwd="CouteauLoelia2019";
 		 $this->base="ppe3_dolignon_charron_couteau";
 		
 		// ORDI DEV2
@@ -40,31 +40,23 @@ class accesBD
 	//-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 	//-----------------------------CONNECTION A LA BASE---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 	//-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	
 	private function connexion()
 	{
 		try
         {
-			// echo "sqlsrv:server=$this->hote$this->port;Database=$this->base"." | ".$this->login." | ".$this->passwd;
+			//echo "sqlsrv:server=$this->hote$this->port;Database=$this->base"." | ".$this->login." | ".$this->passwd;
 			// Pour SQL Server
-
-			 $this->conn = new PDO("sqlsrv:server=$this->hote$this->port;Database=$this->base", $this->login, $this->passwd);
-			 $this->conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
-			
-            // Pour Mysql/MariaDB
-//            $this->conn = new PDO("mysql:dbname=$this->base;host=$this->hote",$this->login, $this->passwd);
-//            $this->boolConnexion = true;
-
 			$this->conn = new PDO("sqlsrv:server=$this->hote$this->port;Database=$this->base", $this->login, $this->passwd);
 			$this->conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION ); 
-			
+            
             // Pour Mysql/MariaDB
-            // $this->conn = new PDO("mysql:dbname=$this->base;host=$this->hote",$this->login, $this->passwd);
-            // $this->boolConnexion = true;
-
+            /*$this->conn = new PDO("mysql:dbname=$this->base;host=$this->hote",$this->login, $this->passwd);*/
+            $this->boolConnexion = true;
         }
         catch(PDOException $e)
         {
-            die("Connection à la base de données échouée".$e->getMessage());
+            die("Connection à la base de données échouée. ".$e->getMessage());
         }
 	}
 	

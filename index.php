@@ -67,12 +67,17 @@ function chargerPage()
 				</table>
 			</div>";*/
 		echo "</nav>
-                <div class='container h-100'>
+			<div class='container h-100'>
                     <div class='row h-100 justify-content-center align-items-center'>
+						<div class='col-lg-4 offset-1'>
+						
+						</div>
+					
+					
                         <table class='table w-50'>
                             <thead>
-                                <td class='head-table-connexion text-white'>Je suis déjà client</td>
-                                <td class='head-table-connexion text-white'>Je crée mon compte</td>
+                                <td class='head-table-connexion'>Je suis déjà client</td>
+                                <td class='head-table-connexion'>Je crée mon compte</td>
                             </thead>
                             <tbody>
                                 <tr>
