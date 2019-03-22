@@ -78,6 +78,20 @@ Class conteneurSaison
 		return $laBonneSaison;
 		}		
 	
+	public function getSaisonsSerie($unIdSerie)
+		{
+			$tabSaisons = arrayObject();
+			$i =0 ;
+			foreach($this->lesSaisons as $saison)
+			{
+				if($saison->getLaSerie()->getIdSerie() == $unIdSerie)
+				{
+					$tabSaisons[$i] = $saison ;
+				}
+				$i++;
+			}
+			return $tabSaisons;
+		}		
 	}
 	
 ?> 

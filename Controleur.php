@@ -304,12 +304,21 @@ class Controleur
 					require 'Vues/voirGenres.php';
 			break;
 			case "choixGenre" :
-				//ici il faut pouvoir visualiser l'ensemble des genres 
+				//ici il faut pouvoir visualiser l'ensemble des supports du genre sélectionné 
 					$_SESSION['tabSupportsIdGenre'] = $this->maVideotheque->leTabSupportsIdGenre($_GET['IdGenre']);
 					$_SESSION['nbSupports'] = $this->maVideotheque->donneNbSupports();
 					$_SESSION['lesSupports'] = $this->maVideotheque->listeDesSupportsIdGenre($_GET['IdGenre']);
 					require 'Vues/voirSupportGenre.php';
 			break;
+			/*case "voirSaisonsEpisodes" :
+				//ici il faut pouvoir visualiser l'ensemble des saisons et des épisodes 
+					$_SESSION['tabSupportsIdGenre'] = $this->maVideotheque->leTabSupportsIdGenre($_GET['IdGenre']);
+					$_SESSION['nbSupports'] = $this->maVideotheque->donneNbSupports();
+					$_SESSION['lesSupports'] = $this->maVideotheque->listeDesSupportsIdGenre($_GET['IdGenre']);
+					$_SESSION['lesSaisons'] = $this->maVideotheque
+					$_SESSION['lesEpisodes'] = 
+					require 'Vues/voirSupportGenre.php';
+			break;*/
 				
 			}
 		}
@@ -325,6 +334,7 @@ class Controleur
 			case "detailsSupport" :
 				//ici il faut pouvoir visualiser l'ensemble des genres 
 					$_SESSION['typeSupport']=$this->maVideotheque->etreUnFilm($_GET['IdSupport']);
+					$support=$_GET['IdSupport'];
 					if($_SESSION['typeSupport'] == "F")
 					{
 						$_SESSION['infosFilm']=$this->maVideotheque->infosFilm($_GET['IdSupport']);

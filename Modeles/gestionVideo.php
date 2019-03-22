@@ -46,8 +46,17 @@ Class gestionVideo
 		$this->chargeLesEmprunts();
 	
 		}
-	
 		
+	public function getSaisons()
+	{
+		return $this->toutesLesSaisons;
+	}
+
+	public function getEpisodes()
+	{
+		return $this->tousLesEpisodes;
+	}
+	
 	//METHODE CHARGEANT TOUTES LES Clients--------------------------------------------------------------------------------------
 	private function chargeLesClients()
 	{

@@ -4,6 +4,7 @@
 	<?php 
 	
 	$leTypeSupport = $_SESSION['typeSupport'];
+	$support = $_GET['IdSupport'];
 
 	if($leTypeSupport == "F")
 	{
@@ -48,6 +49,8 @@
 					<div class="textContenu">
 						Réalisateur : '.$laSerie->getRealisateurSerie().'
 					</div>
+					<br><br>
+					<a class="menu-link" id="lesSaisons">Voir les saisons disponibles</a>
 				</td>
 			</tr>
 		</table>';
@@ -55,3 +58,4 @@
 	?>
 	
 </div>
+

@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 session_start();
 include 'Controleur.php';
 
@@ -108,5 +108,46 @@ function chargerPage()
 
 	chargerPage();
 
-
 ?>
+
+<script>
+$( document ).ready(function() {
+
+
+$('#lesSaisons').click(function(){
+	var x = $.ajax({
+		url: "Modeles/ajax/test.php",
+		timeout: 4000,
+		dataType : "json",
+		encode: true,
+		type: "POST",
+		
+	});
+	x.done(function (data){
+		alert(data);
+		if(data.success)
+		{
+			// Je charge les données dans box
+			alert(data.message);
+		}
+		else
+		{
+		alert('ko');
+		}
+		});
+	x.fail(function(jqXHR, textStatus)
+			{
+			// traitement des erreurs ajax	
+     			if (jqXHR.status === 0){alert("Not connect.n Verify Network.");}
+    			else if (jqXHR.status == 404){alert("Requested page not found. [404]");}
+				else if (jqXHR.status == 500){alert("Internal Server Error [500].");}
+				else if (textStatus === "parsererror"){alert("Requested JSON parse failed.");}
+				else if (textStatus === "timeout"){alert("Time out error.");}
+				else if (textStatus === "abort"){alert("Ajax request aborted.");}
+				else{alert("Uncaught Error.n" + jqXHR.responseText);}
+			});
+
+	})
+});
+
+</script>
