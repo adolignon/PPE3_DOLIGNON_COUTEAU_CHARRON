@@ -80,7 +80,7 @@ Class conteneurSaison
 	
 	public function getSaisonsSerie($unIdSerie)
 		{
-			$tabSaisons = arrayObject();
+			$tabSaisons = array();
 			$i =0 ;
 			foreach($this->lesSaisons as $saison)
 			{

@@ -423,6 +423,14 @@ class accesBD
 			die('Erreur sur donneProchainIdentifiantEpisode : '+$requete->errorCode());
 		}
 		}	
+		
+		public function getSaisons($idSerie)
+		{
+			$stringQuery = "SELECT * FROM saison WHERE idSerie = ".$idSerie.";";
+			$requete = $this->conn->query($stringQuery);
+			return $requete;
+		}
 	}
+
 
 ?>
