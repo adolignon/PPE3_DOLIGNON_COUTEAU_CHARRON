@@ -121,13 +121,13 @@ body
 
 .menu-link
 {
-	text-decoration : none !important;
-	color : rgb(13,106,173);
+
 }
 
 .menu-link:hover
 {
-	color : rgba(13,106,173,0.6);
+	color : #0d6aad !important;
+	cursor: pointer;
 }
 /********* Superposition simple de texte sur une image *******/
 
@@ -203,4 +203,19 @@ body
 	color : #444444;
 	text-shadow: 2px 2px 2px rgba(0,0,0,0.2);
 	top: 0%;
+}
+
+
+.table-striped>tbody>tr:nth-child(odd)>td,
+.table-striped>tbody>tr:nth-child(odd)>th {
+	background-color: rgba(13,106,173,0.5);
+	color: #000000;
+
+}
+
+.table-striped>tbody>tr:nth-child(even)>td,
+.table-striped>tbody>tr:nth-child(even)>th {
+	background-color: rgba(13,106,173,0.2);
+	color: #000000;
+
 }

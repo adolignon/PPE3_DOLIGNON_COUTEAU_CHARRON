@@ -36,6 +36,11 @@ class accesBD
 		$this->connexion();
 		
 		}
+
+		public function getConn()
+		{
+			return $this->conn;
+		}
 	
 	//-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 	//-----------------------------CONNECTION A LA BASE---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -401,7 +406,7 @@ class accesBD
 		{
 		//$prochainId[0]=0;
 		//définition de la requête SQL
-		$stringQuery = $this->specialCase("SELECT MAX(NUMEPISODE) FROM ",$uneTable,"WHERE IDSERIE = ",$unIdentifiantSerie," AND IDSAISON =",$unIdSaison,";");
+		$stringQuery = $this->specialCase("SELECT MAX(NUMEPISODE) FROM ",$uneTable,"WHERE IDSERIE = ",$unIdentifiantSerie," AND IDSAISON =",$unIdentifiantSaison,";");
 		echo $stringQuery;
 		$requete = $this->conn->prepare($stringQuery);
 		$requete->bindValue(1,$unIdentifiantSerie);
@@ -422,13 +427,6 @@ class accesBD
 		{
 			die('Erreur sur donneProchainIdentifiantEpisode : '+$requete->errorCode());
 		}
-		}	
-		
-		public function getSaisons($idSerie)
-		{
-			$stringQuery = "SELECT * FROM saison WHERE idSerie = ".$idSerie.";";
-			$requete = $this->conn->query($stringQuery);
-			return $requete;
 		}
 	}
 

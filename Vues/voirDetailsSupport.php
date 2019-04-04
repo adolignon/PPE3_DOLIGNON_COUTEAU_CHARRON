@@ -9,79 +9,68 @@
 	if($leTypeSupport == "F")
 	{
 		$leFilm = $_SESSION['infosFilm'];
-		echo '<table>
-			<tr>
-				<td>
-					<div class="overlay" style="text-align:left;">
-						<img class="images" src="Images\\'.$leFilm->getImageFilm().'">
-					</div>
-				</td>
-				<td>
-					<div class="textTitre">
-						'.$leFilm->getTitreFilm().'
-					</div>
-					<br><br>
-					<div class="textContenu">
-						Réalisateur : '.$leFilm->getRealisateurFilm().'
-					</div>
-					<div class="textContenu">
-						Durée : '.$leFilm->getDureeFilm().'
-					</div>
-				</td>
-			</tr>
-		</table>';
+		echo '<div class="row">
+            <div class="col-lg-12">
+                <table>
+                <tr>
+                    <td>
+                        <div class="overlay" style="text-align:left;">
+                            <img class="images" src="Images\\'.$leFilm->getImageFilm().'">
+                        </div>
+                    </td>
+                    <td>
+                        <div class="textTitre">
+                            '.$leFilm->getTitreFilm().'
+                        </div>
+                        <br><br>
+                        <div class="textContenu">
+                            Réalisateur : '.$leFilm->getRealisateurFilm().'
+                        </div>
+                        <div class="textContenu">
+                            Durée : '.$leFilm->getDureeFilm().'
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>';
 	}
 	else
 	{
 		$laSerie = $_SESSION['infosSerie'];
-		$lesSaisons = json_encode($_SESSION['tabSaisons']);
-		echo '<table>
-			<tr>
-				<td>
-					<div class="overlay" style="text-align:left;">
-						<img class="images" src="Images\\'.$laSerie->getUneImageDeLaSerie().'">
-					</div>
-				</td>
-				<td>
-					<div class="textTitre">
-						'.$laSerie->getTitreSerie().'
-					</div>
-					<br><br>
-					<div class="textContenu">
-						Réalisateur : '.$laSerie->getRealisateurSerie().'
-					</div>
-					<br><br>
-					<a class="menu-link" id="lesSaisons">Voir les saisons disponibles</a>
-				</td>
-			</tr>
-		</table>';
-		/*foreach($lesSaisons as $saison)
-		{
-			echo '<table>
-				<thead>
-				Saison '.$saison->getIdSaison().'
-				</thead>
-				<tbody>
-					<tr>
-						<td>
-							Année :
-						</td>
-						<td>
-							'.$saison->getAnneeSaison().'
-						</td>
-					</tr>
-					<tr>
-						<td>
-							Nombre d\'épisodes :
-						</td>
-						<td>
-							'.$saison->getNbrEpisodeSaison().'
-						</td>
-					</tr>
-				</tbody>
+//		$lesSaisons = json_encode($_SESSION['tabSaisons']);
+		echo '<div class="row">
+            <div class="col-lg-12">
+                <table>
+                    <tr>
+                        <td>
+                            <div class="overlay" style="text-align:left;">
+                                <img class="images" src="Images\\'.$laSerie->getUneImageDeLaSerie().'">
+                            </div>
+                        </td>
+                        <td>
+                            <div class="textTitre">
+                                '.$laSerie->getTitreSerie().'
+                            </div>
+                            <br><br>
+                            <div class="textContenu">
+                                Réalisateur : '.$laSerie->getRealisateurSerie().'
+                            </div>
+                            <br><br>
+                            <a class="menu-link" id="lesSaisons">Voir les saisons disponibles</a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+		<div class="row">
+            <div class="col-lg-10 offset-1" style="">
+		<table id="retourAjax" class="table table-striped">
 		
-			</table>';
-		};*/
+        </table>
+        </div>
+        </div>';
+
 	}
 	?>
 	
@@ -93,7 +82,7 @@ $( document ).ready(function() {
 var idS = <?php  print $support; ?>;
 
 $('#lesSaisons').click(function(){
-	var x = $.ajax({
+    var x = $.ajax({
 		url: "Modeles/ajax/test.php",
 		timeout: 4000,
 		dataType : "json",
@@ -102,15 +91,37 @@ $('#lesSaisons').click(function(){
 		data: {'idSerie' : idS},
 		
 	});
-	x.done(function (data){
-		if(data.success)
+	x.done(function (retour){
+		if(retour.success)
 		{
-			// Je charge les données dans box
-			alert(idS);
-		}
-		else
-		{
-		alert('ko');
+		    var table = document.getElementById("retourAjax");
+            for (var i=table.rows.length; i>0; i--)
+            {
+                table.deleteRow(i);
+            }
+		    var row = table.insertRow();
+		    var cell1 = row.insertCell(0);
+		    var cell2 = row.insertCell(1);
+		    var cell3 = row.insertCell(2);
+
+		    cell1.innerHTML = "Saison";
+		    cell1.style.color =
+		    cell2.innerHTML = "Année";
+		    cell3.innerHTML = "Nombre d'épisodes";
+			$.each(retour, function(index, value)
+            {
+                if(index != 'success')
+                {
+                    row = table.insertRow();
+                    cell1 = row.insertCell(0);
+                    cell2 = row.insertCell(1);
+                    cell3 = row.insertCell(2);
+                    cell1.innerHTML = index;
+                    cell2.innerHTML = value[0];
+                    cell3.innerHTML = value[1];
+                }
+
+            })
 		}
 		});
 	x.fail(function(jqXHR, textStatus)
