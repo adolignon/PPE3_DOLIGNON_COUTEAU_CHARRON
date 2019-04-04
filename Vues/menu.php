@@ -1,6 +1,6 @@
 ﻿<!--<div class="navbar-collapse" id="navbar3" style="background-color : white;">-->
         <ul class="navbar-nav w-100">
-            <li class="nav-item active">
+           <!-- <li class="nav-item active">
                 <ul class="dropdown spec-bot">
                     <button class="btn dropdown-toggle btn-menu" type="button" data-toggle="dropdown">Les Films<span class="caret"></span></button>
                     <ul class="dropdown-menu fond-sous-onglets-menu">
@@ -15,7 +15,7 @@
                         <li class="sous-onglets-menu"><a class="menu-link" href="#">Voir toutes les séries</a></li>
                     </ul>
                 </ul>    
-            </li>
+            </li>-->
 			<li class="nav-item active">
                 <ul class="dropdown">
                     <button class="btn dropdown-toggle btn-menu" type="button" data-toggle="dropdown">Les Genres<span class="caret"></span></button>

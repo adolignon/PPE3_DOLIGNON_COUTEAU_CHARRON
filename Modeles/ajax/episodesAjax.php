@@ -15,6 +15,7 @@ if($lesEpisodes)
 
 			while($donnees=$lesEpisodes->fetch(PDO::FETCH_OBJ))
 			{
+
 				$data[$donnees->numEpisode][] = $donnees->titreEpisode;
 				$data[$donnees->numEpisode][] = $donnees->duree;
 			}

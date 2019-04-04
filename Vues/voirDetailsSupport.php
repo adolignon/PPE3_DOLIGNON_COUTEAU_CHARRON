@@ -14,7 +14,7 @@
                 <table>
                 <tr>
                     <td>
-                        <div class="overlay" style="text-align:left;">
+                        <div style="text-align:left;">
                             <img class="images" src="Images\\'.$leFilm->getImageFilm().'">
                         </div>
                     </td>
@@ -44,7 +44,7 @@
                 <table>
                     <tr>
                         <td>
-                            <div class="overlay" style="text-align:left;">
+                            <div style="text-align:left;">
                                 <img class="images" src="Images\\'.$laSerie->getUneImageDeLaSerie().'">
                             </div>
                         </td>
@@ -57,7 +57,7 @@
                                 Réalisateur : '.$laSerie->getRealisateurSerie().'
                             </div>
                             <br><br>
-                            <a class="menu-link" id="lesSaisons">Voir les saisons disponibles</a>
+                            <button class="btn btn-blue" id="lesSaisons">Voir les saisons disponibles</button>
                         </td>
                     </tr>
                 </table>
@@ -65,7 +65,7 @@
         </div>
 		<div class="row">
             <div class="col-lg-10 offset-1">
-                <table id="retourAjax" class="table table-striped" style="box-shadow : 5px 10px 10px rgba(0,0,0,0.2);">
+                <table id="saisonsAjax" class="table table-striped" style="box-shadow : 5px 10px 10px rgba(0,0,0,0.2);">
                 
                 </table>
             </div>
@@ -109,13 +109,13 @@
                 var cell3Ep = rowEp.insertCell(2);
 
                 cell1Ep.innerHTML = "Episode";
-                cell1Ep.style.fontWeight = 'bold';
+                enteteGris(cell1Ep);
 
                 cell2Ep.innerHTML = "Titre";
-                cell2Ep.style.fontWeight = 'bold';
+                enteteGris(cell2Ep);
 
                 cell3Ep.innerHTML = "Durée";
-                cell3Ep.style.fontWeight = 'bold';
+                enteteGris(cell3Ep);
 
                 $.each(retourEp, function(index, value)
                 {
@@ -127,7 +127,7 @@
                         cell3Ep = rowEp.insertCell(2);
                         cell1Ep.innerHTML = index;
                         cell2Ep.innerHTML = value[0];
-                        cell3Ep.innerHTML = value[1];
+                        cell3Ep.innerHTML = value[1]+' minutes';
                     }
                 })
             }
@@ -146,6 +146,19 @@
 
     }
 
+    function enteteBleu(unEntete)
+    {
+        unEntete.style.fontWeight = 'bold';
+        unEntete.style.backgroundColor = 'rgba(13,106,173,0.8)';
+    }
+
+    function enteteGris(unEntete)
+    {
+        unEntete.style.fontWeight = 'bold';
+        unEntete.style.backgroundColor = '#9C9C9C';
+    }
+
+
 $( document ).ready(function() {
 	
 var idS = <?php  print $support; ?>;
@@ -163,7 +176,7 @@ $('#lesSaisons').click(function(){
 	x.done(function (retour){
 		if(retour.success)
 		{
-		    var table = document.getElementById("retourAjax");
+		    var table = document.getElementById("saisonsAjax");
             for (var i=table.rows.length-1; i>=0; i--)
             {
                 table.deleteRow(i);
@@ -174,13 +187,13 @@ $('#lesSaisons').click(function(){
 		    var cell3 = row.insertCell(2);
 
 		    cell1.innerHTML = "Saison";
-		    cell1.style.fontWeight = 'bold';
+		    enteteBleu(cell1);
 
 		    cell2.innerHTML = "Année";
-            cell2.style.fontWeight = 'bold';
+            enteteBleu(cell2);
 
             cell3.innerHTML = "Nombre d'épisodes";
-            cell3.style.fontWeight = 'bold';
+            enteteBleu(cell3);
 
 			$.each(retour, function(index, value)
             {

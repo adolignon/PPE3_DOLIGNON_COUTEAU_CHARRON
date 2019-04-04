@@ -139,7 +139,7 @@ body
 }
 
 /* Image originale */
-.overlay .images
+.images
 {
 	position:relative;
 	margin-left : 50px;
@@ -206,16 +206,48 @@ body
 	top: 0%;
 }
 
-.table-striped>tbody>tr:nth-child(odd)>td,
+#saisonsAjax.table-striped>tbody>tr:nth-child(odd)>td,
 .table-striped>tbody>tr:nth-child(odd)>th {
-	background-color: rgba(13,106,173,0.5);
+	background-color: rgba(13,106,173,0.2);
 	color: #000000;
 
 }
 
-.table-striped>tbody>tr:nth-child(even)>td,
+#saisonsAjax.table-striped>tbody>tr:nth-child(even)>td,
 .table-striped>tbody>tr:nth-child(even)>th {
-	background-color: rgba(13,106,173,0.2);
+	background-color: rgba(204,204,204,0.1);
 	color: #000000;
 
+}
+
+#episodesAjax.table-striped>tbody>tr:nth-child(odd)>td,
+.table-striped>tbody>tr:nth-child(odd)>th {
+	background-color: rgba(204,204,204,0.5);
+	color: #000000;
+
+}
+
+.btn-blue {
+	color: #0d6aad;
+	background-color: transparent;
+	background-image: none;
+	border-color: #0d6aad !important;
+}
+
+.btn-blue:hover {
+	color: #fff;
+	background-color: #0d6aad;
+	border-color: #0d6aad;
+}
+
+.btn-blue:not(:disabled):not(.disabled):active, .btn-blue:not(:disabled):not(.disabled).active,
+.show > .btn-blue.dropdown-toggle {
+	color: #fff;
+	background-color: #0d6aad;
+	border-color: #0d6aad;
+}
+
+.btn-blue:not(:disabled):not(.disabled):active:focus, .btn-blue:not(:disabled):not(.disabled).active:focus,
+.show > .btn-blue.dropdown-toggle:focus {
+	box-shadow: 0 0 0 0.2rem rgba(0, 106, 173, 0.5);
 }
