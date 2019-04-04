@@ -205,7 +205,6 @@ body
 	top: 0%;
 }
 
-
 .table-striped>tbody>tr:nth-child(odd)>td,
 .table-striped>tbody>tr:nth-child(odd)>th {
 	background-color: rgba(13,106,173,0.5);

@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e66f9889-f2db-43f1-b7f2-d6b6e31f042b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Modeles/accesBD.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modeles/accesBD.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Modeles/ajax/test.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modeles/ajax/test.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Modeles/gestionVideo.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modeles/gestionVideo.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Vues/voirDetailsSupport.php" beforeDir="false" afterPath="$PROJECT_DIR$/Vues/voirDetailsSupport.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/bootstrap.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/bootstrap.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/stylevideo.css" beforeDir="false" afterPath="$PROJECT_DIR$/stylevideo.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,13 +14,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Vues/voirDetailsSupport.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="58" column="36" lean-forward="true" selection-start-line="58" selection-start-column="36" selection-end-line="58" selection-end-column="36" />
+            <state relative-caret-position="356">
+              <caret line="123" column="75" selection-start-line="123" selection-start-column="75" selection-end-line="123" selection-end-column="75" />
               <folding>
-                <element signature="n#style#0;n#div#0;n#td#0;n#tr#0;n#table#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#table#0;n#div#0;n#div#1;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -32,17 +29,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/stylevideo.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="577">
-              <caret line="219" selection-start-line="219" selection-end-line="219" />
+            <state relative-caret-position="342">
+              <caret line="206" selection-start-line="206" selection-end-line="206" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Modeles/ajax/test.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="16" lean-forward="true" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
+            <state relative-caret-position="119">
+              <caret line="7" column="2" lean-forward="true" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
             </state>
           </provider>
         </entry>
@@ -53,6 +50,7 @@
     <findStrings>
       <find>donneProchainIdentifiantSaison</find>
       <find>conn</find>
+      <find>box</find>
     </findStrings>
     <dirStrings>
       <dir>C:\wamp\www\PPE3_DOLIGNON_COUTEAU_CHARRON</dir>
@@ -94,6 +92,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -138,7 +137,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -170,16 +168,18 @@
       <updated>1538633607547</updated>
       <workItem from="1538633613414" duration="3343000" />
       <workItem from="1554359598644" duration="11933000" />
+      <workItem from="1554376860168" duration="629000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15276000" />
+    <option name="totallyTimeSpent" value="15905000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24641834" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -321,16 +321,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Vues/voirDetailsSupport.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="58" column="36" lean-forward="true" selection-start-line="58" selection-start-column="36" selection-end-line="58" selection-end-column="36" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#td#0;n#tr#0;n#table#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Controleur.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="986">
@@ -340,15 +330,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/stylevideo.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="577">
-          <caret line="219" selection-start-line="219" selection-end-line="219" />
+        <state relative-caret-position="342">
+          <caret line="206" selection-start-line="206" selection-end-line="206" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Modeles/ajax/test.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="16" lean-forward="true" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
+        <state relative-caret-position="119">
+          <caret line="7" column="2" lean-forward="true" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vues/voirDetailsSupport.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="356">
+          <caret line="123" column="75" selection-start-line="123" selection-start-column="75" selection-end-line="123" selection-end-column="75" />
+          <folding>
+            <element signature="n#style#0;n#table#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

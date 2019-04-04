@@ -64,11 +64,11 @@
             </div>
         </div>
 		<div class="row">
-            <div class="col-lg-10 offset-1" style="">
-		<table id="retourAjax" class="table table-striped">
-		
-        </table>
-        </div>
+            <div class="col-lg-10 offset-1">
+                <table id="retourAjax" class="table table-striped" style="box-shadow : 5px 10px 10px rgba(0,0,0,0.2);">
+                
+                </table>
+            </div>
         </div>';
 
 	}
@@ -105,9 +105,14 @@ $('#lesSaisons').click(function(){
 		    var cell3 = row.insertCell(2);
 
 		    cell1.innerHTML = "Saison";
-		    cell1.style.color =
+		    cell1.style.fontWeight = 'bold';
+
 		    cell2.innerHTML = "Année";
-		    cell3.innerHTML = "Nombre d'épisodes";
+            cell2.style.fontWeight = 'bold';
+
+            cell3.innerHTML = "Nombre d'épisodes";
+            cell3.style.fontWeight = 'bold';
+
 			$.each(retour, function(index, value)
             {
                 if(index != 'success')
@@ -116,11 +121,10 @@ $('#lesSaisons').click(function(){
                     cell1 = row.insertCell(0);
                     cell2 = row.insertCell(1);
                     cell3 = row.insertCell(2);
-                    cell1.innerHTML = index;
+                    cell1.innerHTML = '<a class="menu-link" id="lesEpisodes">'+index+'</a>';
                     cell2.innerHTML = value[0];
                     cell3.innerHTML = value[1];
                 }
-
             })
 		}
 		});
