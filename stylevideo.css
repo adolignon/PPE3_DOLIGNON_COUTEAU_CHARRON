@@ -135,24 +135,39 @@ body
 /* Conteneur principal */
 .overlay {
 	position: relative;
-	width: 100%;
+	height:300px;
+	width:300px;
+	margin-left : 50px;
+	margin-right: 50px;
+	margin-top : 50px;
+	margin-bottom : 50px;
+	border-radius: 100%;
 }
 
 /* Image originale */
 .images
 {
 	position:relative;
-	margin-left : 50px;
-	margin-right: 50px;
-	margin-top : 50px;
-	margin-bottom : 50px;
 	border : none;
-	border-radius: 5px;
 	height:300px;
 	width:300px;
+	border-radius: 100%;
 }
 
-.overlay:hover .images
+.imagesSupport
+{
+	position:relative;
+	border : none;
+	height:300px;
+	width:300px;
+	border-radius: 5px;
+	margin-left: 50px;
+	margin-right: 50px;
+	margin-bottom: 50px;
+	box-shadow : 2px 5px 5px rgba(0,0,0,0.2);
+}
+
+.overlay:hover
 {
  transform: scale(1.2);
  transition: .5s ease;
@@ -164,8 +179,8 @@ body
 /* Overlay */
 .overlay .text-clear {
 	position: absolute;
-	top : 50px;
-	left : 50px;
+	top : 0;
+	left : 0;
 	text-align : center;
 	height: 300px;
 	width: 300px;

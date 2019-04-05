@@ -5,6 +5,8 @@
 	
 	$leTypeSupport = $_SESSION['typeSupport'];
 	$support = $_GET['IdSupport'];
+	$leGenre = $_SESSION['idGenre'];
+	$idGenre = $leGenre->getIdGenre();
 
 	if($leTypeSupport == "F")
 	{
@@ -15,7 +17,7 @@
                 <tr>
                     <td>
                         <div style="text-align:left;">
-                            <img class="images" src="Images\\'.$leFilm->getImageFilm().'">
+                            <img class="imagesSupport" src="Images\\'.$leFilm->getImageFilm().'">
                         </div>
                     </td>
                     <td>
@@ -29,6 +31,8 @@
                         <div class="textContenu">
                             Durée : '.$leFilm->getDureeFilm().'
                         </div>
+                        <br><br>
+                            <a class="btn btn-blue" href="index.php?vue=genre&action=choixGenre&IdGenre='.$idGenre.'">Retour</a>
                     </td>
                 </tr>
             </table>
@@ -45,7 +49,7 @@
                     <tr>
                         <td>
                             <div style="text-align:left;">
-                                <img class="images" src="Images\\'.$laSerie->getUneImageDeLaSerie().'">
+                                <img class="imagesSupport" src="Images\\'.$laSerie->getUneImageDeLaSerie().'">
                             </div>
                         </td>
                         <td>
@@ -58,6 +62,7 @@
                             </div>
                             <br><br>
                             <button class="btn btn-blue" id="lesSaisons">Voir les saisons disponibles</button>
+                            <a class="btn btn-blue" href="index.php?vue=genre&action=choixGenre&IdGenre='.$idGenre.'">Retour</a>
                         </td>
                     </tr>
                 </table>

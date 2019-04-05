@@ -335,6 +335,7 @@ class Controleur
 				//ici il faut pouvoir visualiser l'ensemble des genres 
 					$_SESSION['typeSupport']=$this->maVideotheque->etreUnFilm($_GET['IdSupport']);
 					$support=$_GET['IdSupport'];
+					$_SESSION['idGenre'] = $this->maVideotheque->leSupportsIdSupport($support)->getLeGenreDeSupport();
 					if($_SESSION['typeSupport'] == "F")
 					{
 						$_SESSION['infosFilm']=$this->maVideotheque->infosFilm($_GET['IdSupport']);
