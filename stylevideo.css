@@ -225,7 +225,6 @@ body
 .table-striped>tbody>tr:nth-child(odd)>th {
 	background-color: rgba(13,106,173,0.2);
 	color: #000000;
-
 }
 
 #saisonsAjax.table-striped>tbody>tr:nth-child(even)>td,

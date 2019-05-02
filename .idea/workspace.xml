@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e66f9889-f2db-43f1-b7f2-d6b6e31f042b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Modeles/ajax/episodesAjax.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modeles/ajax/episodesAjax.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Vues/menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/Vues/menu.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controleur.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controleur.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/old1.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Vues/voirDetailsSupport.php" beforeDir="false" afterPath="$PROJECT_DIR$/Vues/voirDetailsSupport.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vues/voirGenres.php" beforeDir="false" afterPath="$PROJECT_DIR$/Vues/voirGenres.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/stylevideo.css" beforeDir="false" afterPath="$PROJECT_DIR$/stylevideo.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -14,25 +16,16 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Vues/menu.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="24" column="29" lean-forward="true" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
       <find>donneProchainIdentifiantSaison</find>
       <find>conn</find>
-      <find>box</find>
       <find>'</find>
       <find>retourAjax</find>
+      <find>box</find>
+      <find>vueGenre</find>
     </findStrings>
     <dirStrings>
       <dir>C:\wamp\www\PPE3_DOLIGNON_COUTEAU_CHARRON</dir>
@@ -46,7 +39,6 @@
       <list>
         <option value="$PROJECT_DIR$/Modeles/Metiers/client.php" />
         <option value="$PROJECT_DIR$/Modeles/Conteneurs/conteneurClient.php" />
-        <option value="$PROJECT_DIR$/Controleur.php" />
         <option value="$PROJECT_DIR$/Vues/modifEmail.php" />
         <option value="$PROJECT_DIR$/Vues/infosModifie.php" />
         <option value="$PROJECT_DIR$/Vues/okModifier.php" />
@@ -57,9 +49,11 @@
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/Vues/vueDetailEpisodes.php" />
         <option value="$PROJECT_DIR$/Modeles/ajax/episodesAjax.php" />
-        <option value="$PROJECT_DIR$/Vues/voirDetailsSupport.php" />
-        <option value="$PROJECT_DIR$/stylevideo.css" />
         <option value="$PROJECT_DIR$/Vues/menu.php" />
+        <option value="$PROJECT_DIR$/Vues/voirGenres.php" />
+        <option value="$PROJECT_DIR$/stylevideo.css" />
+        <option value="$PROJECT_DIR$/Controleur.php" />
+        <option value="$PROJECT_DIR$/Vues/voirDetailsSupport.php" />
       </list>
     </option>
   </component>
@@ -83,6 +77,11 @@
             <path>
               <item name="PPE3_DOLIGNON_COUTEAU_CHARRON" type="b2602c69:ProjectViewProjectNode" />
               <item name="PPE3_DOLIGNON_COUTEAU_CHARRON" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PPE3_DOLIGNON_COUTEAU_CHARRON" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PPE3_DOLIGNON_COUTEAU_CHARRON" type="462c0819:PsiDirectoryNode" />
+              <item name="Images" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="PPE3_DOLIGNON_COUTEAU_CHARRON" type="b2602c69:ProjectViewProjectNode" />
@@ -159,18 +158,18 @@
       <workItem from="1538633613414" duration="3343000" />
       <workItem from="1554359598644" duration="11933000" />
       <workItem from="1554376860168" duration="687000" />
-      <workItem from="1554382646852" duration="8050000" />
+      <workItem from="1554382646852" duration="8189000" />
+      <workItem from="1554467049545" duration="6664000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24013000" />
+    <option name="totallyTimeSpent" value="30816000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25358167" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25716332" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -223,9 +222,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Vues/voirSupportGenre.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/Modeles/Metiers/serie.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-222">
@@ -260,13 +256,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Modeles/gestionVideo.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="418" column="62" lean-forward="true" selection-start-line="418" selection-start-column="62" selection-end-line="418" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Modeles/Conteneurs/conteneurSaison.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="424">
@@ -285,13 +274,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="464">
           <caret line="429" column="9" selection-start-line="429" selection-start-column="9" selection-end-line="429" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Controleur.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="986">
-          <caret line="160" column="46" selection-start-line="160" selection-start-column="36" selection-end-line="160" selection-end-column="46" />
         </state>
       </provider>
     </entry>
@@ -314,9 +296,7 @@
     <entry file="file://$PROJECT_DIR$/Vues/accueil.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Vues/vueDetailEpisodes.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Vues/vueDetailEpisodes.php" />
     <entry file="file://$PROJECT_DIR$/Modeles/ajax/saisonsAjax.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -328,17 +308,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
           <caret line="2606" selection-start-line="2606" selection-end-line="2611" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Vues/voirDetailsSupport.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="26" lean-forward="true" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#td#0;n#tr#0;n#table#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#table#0;n#div#0;n#div#2;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -356,13 +325,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/stylevideo.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="141" selection-start-line="141" selection-end-line="141" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Vues/entete.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -374,6 +336,97 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
           <caret line="24" column="29" lean-forward="true" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Images/14.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Images/10.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Images/5.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Images/45.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Images/36.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Modeles/Conteneurs/conteneurSupport.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="60" column="20" selection-start-line="60" selection-start-column="20" selection-end-line="60" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vues/voirDetailsSupport.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="64" column="35" selection-start-line="64" selection-start-column="35" selection-end-line="64" selection-end-column="35" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#td#0;n#tr#0;n#table#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vues/voirGenres.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="107" lean-forward="true" selection-start-line="18" selection-start-column="45" selection-end-line="18" selection-end-column="107" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stylevideo.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="165" column="17" selection-start-line="165" selection-start-column="17" selection-end-line="165" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Modeles/Metiers/genre.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="30" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Modeles/Metiers/support.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="39" column="39" selection-start-line="39" selection-start-column="20" selection-end-line="39" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controleur.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="337" column="40" lean-forward="true" selection-start-line="337" selection-start-column="20" selection-end-line="337" selection-end-column="40" />
+          <folding>
+            <element signature="n#style#0;n#p#0;n#strong#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Modeles/gestionVideo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="392" column="46" selection-start-line="392" selection-start-column="46" selection-end-line="392" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Modeles/Conteneurs/conteneurGenre.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="85" column="20" selection-start-line="85" selection-start-column="20" selection-end-line="85" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vues/voirSupportGenre.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="54" selection-start-line="20" selection-start-column="54" selection-end-line="20" selection-end-column="54" />
         </state>
       </provider>
     </entry>
