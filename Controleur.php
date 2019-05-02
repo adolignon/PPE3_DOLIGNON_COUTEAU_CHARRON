@@ -27,6 +27,8 @@ class Controleur
 		{
 		//appel de la vue de l'entête
 		require 'Vues/entete.php';
+		// appel de la vue du menu
+		require 'Vues/menu.php';
 		}
 		
 		
@@ -43,11 +45,11 @@ class Controleur
 	//-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 	//--------------------------METHODE D'AFFICHAGE DU MENU-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 	//-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-	public function afficheMenu()
-		{
-		//appel de la vue du menu
-		require 'Vues/menu.php';
-		}
+	// public function afficheMenu()
+		// {
+		// appel de la vue du menu
+		// require 'Vues/menu.php';
+		// }
 	
 	
 	//-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -140,8 +142,8 @@ class Controleur
 						{
 							
 							if($this->maVideotheque->verifActif($unLogin,$unPassword)==1){
-								require 'Vues/menu.php';
-								echo $this->maVideotheque->listeLesGenres();
+								// require 'Vues/menu.php';
+								require 'Vues/accueil.php';
 							}
 							else{
 								echo '<strong><p style="color:white">Votre chèque ne nous est pas encore parvenu. En attendant réception de celui-ci les vidéos vous sont innacessibles.</p></strong>';
@@ -175,8 +177,8 @@ class Controleur
 					
 				case "menu" : 
 					if($this->maVideotheque->verifActif($_SESSION['login'],$_SESSION['password'])==1){
-						require 'Vues/menu.php';
-						echo $this->maVideotheque->listeLesGenres();
+						// require 'Vues/menu.php';
+						require 'Vues/accueil.php';
 					}
 					
 					break;
@@ -304,12 +306,21 @@ class Controleur
 					require 'Vues/voirGenres.php';
 			break;
 			case "choixGenre" :
-				//ici il faut pouvoir visualiser l'ensemble des genres 
+				//ici il faut pouvoir visualiser l'ensemble des supports du genre sélectionné 
 					$_SESSION['tabSupportsIdGenre'] = $this->maVideotheque->leTabSupportsIdGenre($_GET['IdGenre']);
 					$_SESSION['nbSupports'] = $this->maVideotheque->donneNbSupports();
 					$_SESSION['lesSupports'] = $this->maVideotheque->listeDesSupportsIdGenre($_GET['IdGenre']);
 					require 'Vues/voirSupportGenre.php';
 			break;
+			/*case "voirSaisonsEpisodes" :
+				//ici il faut pouvoir visualiser l'ensemble des saisons et des épisodes 
+					$_SESSION['tabSupportsIdGenre'] = $this->maVideotheque->leTabSupportsIdGenre($_GET['IdGenre']);
+					$_SESSION['nbSupports'] = $this->maVideotheque->donneNbSupports();
+					$_SESSION['lesSupports'] = $this->maVideotheque->listeDesSupportsIdGenre($_GET['IdGenre']);
+					$_SESSION['lesSaisons'] = $this->maVideotheque
+					$_SESSION['lesEpisodes'] = 
+					require 'Vues/voirSupportGenre.php';
+			break;*/
 				
 			}
 		}
@@ -325,6 +336,8 @@ class Controleur
 			case "detailsSupport" :
 				//ici il faut pouvoir visualiser l'ensemble des genres 
 					$_SESSION['typeSupport']=$this->maVideotheque->etreUnFilm($_GET['IdSupport']);
+					$support=$_GET['IdSupport'];
+					$_SESSION['idGenre'] = $this->maVideotheque->leSupportsIdSupport($support)->getLeGenreDeSupport();
 					if($_SESSION['typeSupport'] == "F")
 					{
 						$_SESSION['infosFilm']=$this->maVideotheque->infosFilm($_GET['IdSupport']);

@@ -17,7 +17,7 @@
 						echo '<td>
 									<div class="overlay">
 									<a href="index.php?vue=genre&action=choixGenre&IdGenre='.$tabG[$j][0].'">
-											<img class="images" src="Images\\'.$tabG[$j][0].'.jpg">
+											<img class="images" src="Images\Genres\\'.$tabG[$j][0].'.png">
 											<div class="text-clear">
 												<div class="text">'.$tabG[$j][1].'</div>
 											</div>

@@ -22,9 +22,6 @@
 										<div class="text-clear">
 											<div class="text">'.$leTabSupportIdGenre[$j][3].'</div>
 										</div>
-										<div class="textContenu">
-											Détails
-										</div>
 									</a>
 								</div>
 							</td>';

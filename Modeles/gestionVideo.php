@@ -47,7 +47,6 @@ Class gestionVideo
 	
 		}
 	
-		
 	//METHODE CHARGEANT TOUTES LES Clients--------------------------------------------------------------------------------------
 	private function chargeLesClients()
 	{

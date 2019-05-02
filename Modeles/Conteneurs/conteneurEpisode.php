@@ -46,8 +46,23 @@ Class conteneurEpisode
 			}
 		$liste = $liste."</SELECT>";
 		return $liste;
+		}
+
+	public function getEpisodesSaison($unIdSaison)
+		{
+			$tabEpisodes = arrayObject();
+			$i =0 ;
+			foreach($this->lesEpisodes as $episode)
+			{
+				if($episode->getLaSaisonEpisode()->getIdSaison() == $unIdSaison)
+				{
+					$tabEpisodes[$i] = $episode ;
+				}
+				$i++;
+			}
+			return $tabEpisodes;
 		}		
 	
-	}
-	
+	}		
+
 ?> 
